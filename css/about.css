@@ -9,13 +9,14 @@
 .card {
   width: 25%;
   border-radius: 15px;
-  box-shadow: 0 0 7.5px grey;
-  transition: all 0.3s ease 0s;
+  box-shadow: 0 0 10px 5px lightgray;
+  transition: all 0.5s ease 0s;
 }
 
 .card img {
   width: 75%;
   margin-left: 12.5%;
+  cursor: pointer;
 }
 
 .card h2 {
