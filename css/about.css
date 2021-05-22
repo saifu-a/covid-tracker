@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3%;
+}
+
+.card {
+  width: 25%;
+  border-radius: 15px;
+  box-shadow: 0 0 7.5px grey;
+  transition: all 0.3s ease 0s;
+}
+
+.card img {
+  width: 75%;
+  margin-left: 12.5%;
+}
+
+.card h2 {
+  margin: 1rem;
+  margin-left: 12.5%;
+  font-family: "Lato", sans-serif;
+  text-transform: capitalize;
+}
+
+.card p {
+  margin: 1rem;
+  margin-left: 12.5%;
+  padding-right: 2.5%;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+}
+
+.card-one {
+    background-color: #cbf1f5;
+}
+
+.card-one:hover {
+    background-color: #a6e3e9;
+}
+
+.card-two {
+    background-color: #ffe2e2;
+}
+
+.card-two:hover {
+    background-color: #fcbad3;
+}
