@@ -1,5 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.navbar header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 1rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #468dff;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar li:hover, .navbar li:focus {
+   color: lightcoral;
+}
+
 .logo {
-   width: 10%;
-   height: 3rem;
-   object-fit: cover; 
+  cursor: pointer;
+  width: 20%;
+  height: 6rem;
+  object-fit: cover;
 }
