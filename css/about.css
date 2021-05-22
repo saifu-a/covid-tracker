@@ -10,7 +10,7 @@
   width: 25%;
   border-radius: 15px;
   box-shadow: 0 0 10px 5px lightgray;
-  transition: all 0.5s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .card img {
@@ -35,17 +35,19 @@
 }
 
 .card-one {
-    background-color: #cbf1f5;
+  background-color: #cbf1f5;
 }
 
 .card-one:hover {
-    background-color: #a6e3e9;
+  background-color: #a6e3e9;
+  transform: scale(1.05);
 }
 
 .card-two {
-    background-color: #ffe2e2;
+  background-color: #ffe2e2;
 }
 
 .card-two:hover {
-    background-color: #fcbad3;
+  background-color: #fcbad3;
+  transform: scale(1.05);
 }
