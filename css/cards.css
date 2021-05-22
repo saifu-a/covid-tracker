@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #fefefe;
+    font-family: sans-serif;
+  }
+.container{
+    width: 90%;
+  margin: 50px auto;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    /* justify-content : space-evenly; */
+    flex-flow: wrap;
+}
+.box{
+    width: 20%;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+  transition: 0.3s;
+}
+.header{
+    text-align: center;
+    padding: 10px 10px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+}
+#confirmed {
+    padding: 20px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+#recovered{
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+#deceased{
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.box:hover{
+    transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+  
