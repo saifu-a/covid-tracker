@@ -271,18 +271,9 @@ var simplemaps_countrymap_mapdata = {
   regions: {},
 };
 
-function getCurrentDate() {
-  var today = new Date();
-  var dd = String(today.getDate() - 1).padStart(2, "0");
-  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-  var yyyy = today.getFullYear();
-
-  return yyyy + "-" + mm + "-" + dd;
-}
-
 async function fetchStateData() {
   let response = await fetch(
-    "https://api.covid19india.org/v4/min/timeseries.min.json"
+    "https://api.covid19india.org/v4/min/data.min.json"
   );
   let data = await response.json();
 
@@ -290,12 +281,10 @@ async function fetchStateData() {
 }
 
 function displayStateData(data) {
-  let today = getCurrentDate();
-
   let states = simplemaps_countrymap_mapdata["state_specific"];
   for (let state in states) {
     let stateCode = states[state]["code"];
-    let stateData = data[stateCode]["dates"][today]["total"];
+    let stateData = data[stateCode]["total"];
 
     states[state]["description"] =
       `Confirmed: ${stateData["confirmed"]} <br>` +
