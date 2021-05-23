@@ -1,13 +1,10 @@
 async function fetchData() {
     await fetch("https://api.covid19api.com/summary")
       .then((response) => {
-        console.log("Inside first then");
         return response.json();
       })
       .then((data) => {
-        console.log("Inside second then");
         c='+';
-        console.log(data.Countries[76].NewConfirmed);
         const confirmed = data.Countries[76].TotalConfirmed;
         const new_confirmed = data.Countries[76].NewConfirmed;
         document.getElementById( "confirmed").innerHTML += `<p>${confirmed}<br><small>${c}${new_confirmed}</small></p>`; 
