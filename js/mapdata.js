@@ -278,6 +278,7 @@ async function fetchStateData() {
   let data = await response.json();
 
   displayStateData(data);
+  simplemaps_countrymap.refresh();
 }
 
 function displayStateData(data) {
