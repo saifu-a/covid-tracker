@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Covid-19 Tracker</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
@@ -27,7 +28,7 @@
     </section>
 
     <main>
-      <section class="page-one">
+      <section id="page-one">
         <div class="container">
           <div class="cards">
             <div class="box">
@@ -49,6 +50,8 @@
           <div id="map"></div>
         </div>
       </section>
+      <section class="page-two"></section>
+      <section class="page-three"></section>
     </main>
     <script src="js/script.js"></script>
     <script src="js/cards.js"></script>
