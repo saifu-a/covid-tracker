@@ -73,154 +73,187 @@ var simplemaps_countrymap_mapdata = {
   state_specific: {
     1: {
       name: "Andaman And Nicobar",
+      code: "AN",
       description: " ",
     },
     2: {
       name: "Andhra Pradesh",
+      code: "AP",
       description: " ",
     },
     3: {
       name: "Arunachal Pradesh",
+      code: "AR",
       description: " ",
     },
     4: {
       name: "Assam",
+      code: "AS",
       description: " ",
     },
     5: {
       name: "Bihar",
+      code: "BR",
       description: " ",
     },
     6: {
       name: "Chandigarh",
+      code: "CH",
       description: " ",
     },
     7: {
       name: "Chhattisgarh",
+      code: "CT",
       description: " ",
     },
     8: {
       name: "Dadra And Nagar Haveli",
+      code: "DN",
       description: " ",
     },
     9: {
       name: "Daman And Diu",
+      code: "DN",
       description: " ",
     },
     10: {
       name: "Delhi",
+      code: "DL",
       description: " ",
     },
     11: {
       name: "Goa",
+      code: "GA",
       description: " ",
     },
     12: {
       name: "Gujarat",
+      code: "GJ",
       description: " ",
     },
     13: {
       name: "Haryana",
+      code: "HR",
       description: " ",
     },
     14: {
       name: "Himachal Pradesh",
+      code: "HP",
       description: " ",
     },
     16: {
       name: "Jharkhand",
+      code: "JH",
       description: " ",
     },
     17: {
       name: "Karnataka",
+      code: "KA",
       description: " ",
     },
     18: {
       name: "Kerala",
+      code: "KL",
       description: " ",
     },
     19: {
       name: "Lakshadweep",
+      code: "LD",
       description: " ",
     },
     20: {
       name: "Madhya Pradesh",
+      code: "MP",
       description: " ",
     },
     21: {
       name: "Maharashtra",
+      code: "MH",
       description: " ",
     },
     22: {
       name: "Manipur",
+      code: "MN",
       description: " ",
     },
     23: {
       name: "Meghalaya",
+      code: "ML",
       description: " ",
     },
     24: {
       name: "Mizoram",
+      code: "MZ",
       description: " ",
     },
     25: {
       name: "Nagaland",
+      code: "NL",
       description: " ",
     },
     26: {
       name: "Orissa",
+      code: "OR",
       description: " ",
     },
     27: {
       name: "Puducherry",
+      code: "PY",
       description: " ",
     },
     28: {
       name: "Punjab",
+      code: "PB",
       description: " ",
     },
     29: {
       name: "Rajasthan",
+      code: "RJ",
       description: " ",
     },
     30: {
       name: "Sikkim",
+      code: "SK",
       description: " ",
     },
     31: {
       name: "Tamil Nadu",
+      code: "TN",
       description: " ",
     },
     32: {
       name: "Tripura",
+      code: "TR",
       description: " ",
     },
     33: {
       name: "Uttar Pradesh",
+      code: "UP",
       description: " ",
     },
     34: {
-      name: "Uttaranchal",
+      name: "Uttarakhand",
+      code: "UT",
       description: " ",
     },
     35: {
       name: "West Bengal",
+      code: "WB",
       description: " ",
     },
     36: {
       name: "Jammu And Kashmir",
+      code: "JK",
       description: " ",
     },
     37: {
       name: "Telangana",
+      code: "TG",
       description: " ",
     },
     38: {
       name: "Ladakh",
-      description: " ",
-    },
-    standard: {
-      inactive: "yes",
+      code: "LA",
       description: " ",
     },
   },
@@ -237,3 +270,39 @@ var simplemaps_countrymap_mapdata = {
   },
   regions: {},
 };
+
+function getCurrentDate() {
+  var today = new Date();
+  var dd = String(today.getDate() - 1).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yyyy = today.getFullYear();
+
+  return yyyy + "-" + mm + "-" + dd;
+}
+
+async function fetchStateData() {
+  let response = await fetch(
+    "https://api.covid19india.org/v4/min/timeseries.min.json"
+  );
+  let data = await response.json();
+
+  displayStateData(data);
+}
+
+function displayStateData(data) {
+  let today = getCurrentDate();
+
+  let states = simplemaps_countrymap_mapdata["state_specific"];
+  for (let state in states) {
+    let stateCode = states[state]["code"];
+    let stateData = data[stateCode]["dates"][today]["total"];
+
+    states[state]["description"] =
+      `Confirmed: ${stateData["confirmed"]} <br>` +
+      `Deceased: ${stateData["deceased"]} <br>` +
+      `Recovered: ${stateData["recovered"]} <br>` +
+      `Vaccinated: ${stateData["vaccinated"]}`;
+  }
+}
+
+fetchStateData();
