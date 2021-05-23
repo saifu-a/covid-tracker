@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 .navbar header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0 20px lightgray;
 }
 
 .navbar ul {
@@ -22,8 +23,10 @@
   transition: all 0.3s ease 0s;
 }
 
-.navbar li:hover, .navbar li:focus {
-   color: lightcoral;
+.navbar li:hover,
+.navbar li:focus {
+  color: lightcoral;
+  transform: scale(1.1);
 }
 
 .logo {
@@ -31,4 +34,9 @@
   width: 20%;
   height: 6rem;
   object-fit: cover;
+  transition: all 0.3s ease 0s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
