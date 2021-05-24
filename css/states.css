@@ -79,40 +79,40 @@ html{
     font-weight: bold;
     color:darkslategray;
     position:relative;
-    top: 10px;
+    top: 20px;
 }
 .recovered .value{
     font-size: 2em;
     font-weight: bold;
     color: blue;
     position:relative;
-    top: 10px;
+    top: 20px;
 }
 .deaths .value{
     font-size: 2em;
     font-weight: bold;
     color: #f44336;
     position:relative;
-    top: 10px;
+    top: 20px;
 }
 .vaccinated .value{
     font-size: 2em;
     font-weight: bold;
     color: green;
     position:relative;
-    top: 10px;
+    top: 20px;
 }
 .tested .value{
     font-size: 2em;
     font-weight: bold;
     color: yellow;
     position:relative;
-    top: 10px;
+    top: 20px;
 }
 .new-value{
     font-size: 1.3em;
     position:relative;
-    top: 20px;
+    top: 30px;
 }
 .search-state{
     position: relative;
