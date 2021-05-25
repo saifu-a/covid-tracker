@@ -7,19 +7,10 @@
 html {
   font-size: 16px;
 }
-<<<<<<< HEAD
 
-.page-two{
-    max-width: 1200px;
-    margin: 0 auto;
-=======
-.hide {
-  display: none;
-}
 .page-two {
   max-width: 1200px;
   margin: 0 auto;
->>>>>>> 0d873b1e380e6571362c039c43d00cfee87d9b43
 }
 
 .latest-reports {
