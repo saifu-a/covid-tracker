@@ -7,7 +7,9 @@
 html {
   font-size: 16px;
 }
-
+.hide{
+  display: none; 
+} 
 .page-two {
   max-width: 1200px;
   margin: 0 auto;
@@ -64,11 +66,6 @@ html {
 }
 .name {
   font-size: 30px;
-  position: relative;
-  right: 100px;
-}
-.change-state {
-  cursor: pointer;
   position: relative;
   right: 100px;
 }

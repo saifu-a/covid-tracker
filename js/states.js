@@ -39,7 +39,6 @@ let stateList = [
 
 const search_state_element = document.querySelector(".search-state");
 const state_list_element = document.querySelector(".state-list");
-const chang_state_btn = document.querySelector(".change-state");
 const close_list_btn = document.querySelector(".close-btn");
 const input = document.getElementById("search-input");
 
@@ -65,19 +64,16 @@ function createStateList() {
 let num_of_ul_lists = 2;
 createStateList();
 
-chang_state_btn.addEventListener("click", function () {
+search_state_element.classList.remove("hide");
+close_list_btn.addEventListener("click", function () {
   input.value = "";
   resetStateList();
-  search_state_element.classList.toggle("hide");
-  search_state_element.classList.add("fadeIn");
-});
-
-close_list_btn.addEventListener("click", function () {
-  search_state_element.classList.toggle("hide");
+  search_state_element.classList.remove("hide");
+  search_state_element.classList.remove("fadeIn");
 });
 
 state_list_element.addEventListener("click", function () {
-  search_state_element.classList.toggle("hide");
+  search_state_element.classList.remove("hide");
 });
 
 input.addEventListener("input", function () {
@@ -137,9 +133,9 @@ async function fetchData(state1) {
               total_cases = data[properties[j]].total.confirmed;
               recovered_cases = data[properties[j]].total.recovered;
               death_cases = data[properties[j]].total.deceased;
-              new_confirmed_cases = data[properties[j]].delta.confirmed;
-              new_recovered_cases = data[properties[j]].delta.recovered;
-              new_death_cases = data[properties[j]].delta.deceased;
+              new_confirmed_cases = data[properties[j]].delta7.confirmed;
+              new_recovered_cases = data[properties[j]].delta7.recovered;
+              new_death_cases = data[properties[j]].delta7.deceased;
               vaccinated = data[properties[j]].total.vaccinated;
               tested = data[properties[j]].total.tested;
               new_vaccinated = data[properties[j]].delta7.vaccinated;
