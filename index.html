@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/states.css" />
   </head>
   <body>
     <!-- Navbar section -->
@@ -31,6 +32,9 @@
       <section id="page-one">
         <div class="container">
           <div class="cards">
+            <div class="graph">
+              <canvas id="line-chart"></canvas>
+            </div>
             <div class="box">
               <div class="header"><h1>Confirmed</h1></div>
               <div class="content" id="confirmed"></div>
@@ -43,19 +47,17 @@
               <div class="header"><h1>Deaths</h1></div>
               <div class="content" id="deceased"></div>
             </div>
-            <div class="graph">
-              <canvas id="line-chart"></canvas>
-            </div>
           </div>
           <div id="map"></div>
         </div>
       </section>
-      <section class="page-two"></section>
-      <section class="page-three"></section>
+      <section id="page-two"></section>
+      <section id="page-three"></section>
     </main>
     <script src="js/script.js"></script>
     <script src="js/cards.js"></script>
     <script src="js/mapdata.js"></script>
     <script src="js/countrymap.js"></script>
+    <script src="js/states.js"></script>
   </body>
 </html>

@@ -59,7 +59,7 @@ async function drawGraph() {
     options: {
       title: {
         display: true,
-        text: "Graphical Representation",
+        text: "India",
         fontSize: 25,
         responsive: true,
         maintainAspectRatio: false,
