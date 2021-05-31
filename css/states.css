@@ -4,6 +4,18 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+<<<<<<< HEAD
+=======
+
+html {
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+>>>>>>> 9f802f6e1e0d748ac4d3ad416ae226d92284cad5
 .page-two {
   max-width: 1200px;
   margin: 0 auto;
