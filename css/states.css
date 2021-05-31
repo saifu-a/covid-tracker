@@ -2,132 +2,118 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Gilroy", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
-html {
-  font-size: 16px;
-}
-.hide{
-  display: none; 
-} 
 .page-two {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.hide{
+   display: none; 
+} 
 .latest-reports {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 50px;
+  height:200px;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 30px;
   color: black;
 }
-
-.state,
+.flex-container{
+  padding: 5px 5px 0 5px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: row wrap;
+  gap: 12px;
+  justify-content: center;
+  height:200px;
+}
+.state-chart{
+  width: 80%;
+  height: 70vh;
+  min-height: 500px;
+  margin: 0 auto;
+  /* padding: 50px 0; */
+  padding-top: 100px;
+}
 .total-cases,
 .recovered,
 .deaths,
 .vaccinated,
-.tested {
-  height: 80px;
+.tested{
+  width: 180px;
+  height: 150px;
   font-weight: bold;
-  position: relative;
-  top: 40px;
+  text-align: center;
 }
-.total-cases {
-  position: relative;
-  left: 20px;
-  top: 40px;
-}
-.recovered {
-  position: relative;
-  left: 30px;
-  top: 40px;
-}
-.deaths {
-  position: relative;
-  left: 50px;
-  top: 40px;
-}
-.vaccinated {
-  position: relative;
-  left: 70px;
-  top: 40px;
-}
-.tested {
-  position: relative;
-  left: 90px;
-  top: 40px;
+.state{
+  font-weight: bold;
 }
 .title {
-  font-size: 22px;
+  font-size: 25px;
 }
 .name {
-  font-size: 30px;
-  position: relative;
-  right: 100px;
+  font-size: 40px;
+  align-content: flex-start;
 }
 .total-cases .value {
-  font-size: 2em;
+  font-size: 20px;
   font-weight: bold;
-  color: darkslategray;
+  color: yellow;
   position: relative;
   top: 20px;
 }
 .recovered .value {
-  font-size: 2em;
+  font-size: 20px;
   font-weight: bold;
-  color: blue;
+  color: green;
   position: relative;
   top: 20px;
 }
 .deaths .value {
-  font-size: 2em;
+  font-size: 20px;
   font-weight: bold;
   color: #f44336;
   position: relative;
   top: 20px;
 }
 .vaccinated .value {
-  font-size: 2em;
+  font-size: 20px;
   font-weight: bold;
-  color: green;
+  color: blue;
   position: relative;
   top: 20px;
 }
 .tested .value {
-  font-size: 2em;
+  font-size: 20px;
   font-weight: bold;
-  color: yellow;
+  color: purple;
   position: relative;
   top: 20px;
 }
 .new-value {
-  font-size: 1.3em;
+  font-size: 15px;
   position: relative;
   top: 30px;
 }
 .search-state {
-  position: relative;
-  top: 10px;
+  align-content: flex-start;
 }
 .search-box {
-  position: relative;
-  right: 100px;
-  display: flex;
+  align-content: flex-start;
   align-items: center;
   justify-content: space-between;
   width: 400px;
   height: 30px;
-  background-color: grey;
+  background-color:grey;
   z-index: 1;
 }
 ::placeholder {
-  color: white;
+  color: black;
 }
 .search-box input {
+  align-content: flex-start;
   width: 360px;
   height: 25px;
   border: none;
@@ -137,27 +123,23 @@ html {
   font-size: 1.1em;
 }
 .search-box img {
+  align-content: flex-start;
   width: 20px;
   padding-right: 5px;
-  cursor: pointer black;
+  cursor: pointer;
 }
-
 .state-list {
   display: flex;
-  position: relative;
-  top: 2px;
-  right: 100px;
+  align-content: flex-start;
   width: 400px;
   height: 300px;
-  background-color: white;
+  background-color: transparent;
   opacity: 0.9;
   overflow-y: scroll;
 }
-
 .state-list ul {
   width: 100%;
 }
-
 .state-list ul li {
   list-style: none;
   cursor: pointer;
@@ -166,7 +148,7 @@ html {
 }
 .state-list ul li:hover {
   color: orangered;
-  border-left: 1px solid black;
+  /* border-left: 1px solid black; */
 }
 /* SCROLL BAR */
 .state-list::-webkit-scrollbar {
@@ -175,13 +157,15 @@ html {
 .state-list::-webkit-scrollbar-track {
   background: grey;
 }
-
 /* Handle */
 .state-list::-webkit-scrollbar-thumb {
   background: blue;
 }
-
 /* Handle on hover */
 .state-list::-webkit-scrollbar-thumb:hover {
   background: blue;
+}
+.change-state{
+  align-content: flex-start;
+  cursor: pointer;
 }

@@ -39,6 +39,7 @@ let stateList = [
 
 const search_state_element = document.querySelector(".search-state");
 const state_list_element = document.querySelector(".state-list");
+const chang_state_btn = document.querySelector(".change-state");
 const close_list_btn = document.querySelector(".close-btn");
 const input = document.getElementById("search-input");
 
@@ -64,16 +65,19 @@ function createStateList() {
 let num_of_ul_lists = 2;
 createStateList();
 
-search_state_element.classList.remove("hide");
-close_list_btn.addEventListener("click", function () {
+chang_state_btn.addEventListener("click", function () {
   input.value = "";
   resetStateList();
-  search_state_element.classList.remove("hide");
-  search_state_element.classList.remove("fadeIn");
+  search_state_element.classList.toggle("hide");
+  search_state_element.classList.add("fadeIn");
+});
+
+close_list_btn.addEventListener("click", function () {
+  search_state_element.classList.toggle("hide");
 });
 
 state_list_element.addEventListener("click", function () {
-  search_state_element.classList.remove("hide");
+  search_state_element.classList.toggle("hide");
 });
 
 input.addEventListener("input", function () {
@@ -144,15 +148,16 @@ async function fetchData(state1) {
           }
         }
       });
-      updateUI();
+      updateUI(state1);
     });
 }
 let l = stateList.length;
 let user_state = stateList[l - 1].name;
 fetchData(user_state);
 
-function updateUI() {
+function updateUI(state) {
   updateStats();
+  StateLineChart(state);
 }
 
 function updateStats() {
@@ -168,3 +173,99 @@ function updateStats() {
   tested_element.innerHTML = tested;
   new_tested_element.innerHTML = `+${new_tested}`;
 }
+
+function StateLineChart(state) {
+  let confirmed = [];
+  let deaths = [];
+  let recovered = [];
+  let date = [];
+  let vaccinated = [];
+  let index;
+  let state_name;
+  async function fetchStateData() {
+    await fetch("https://api.covid19india.org/v4/min/data-all.min.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        stateList.forEach((state1) => {
+          if (state == state1.name) {
+            state_name = state;
+            index = stateList.findIndex((element) => {
+              if (element.name === state) {
+                return true;
+              }
+            });
+            if (index >= 33) {
+              index = index + 1;
+            }
+          }
+        });
+        const length = Object.keys(data).length - 1;
+        const range = 20;
+        const interval = 6;
+        let properties = Object.keys(data);
+        for (let i = range; i >= 0; i--) {
+          let p = length - i * interval;
+          let data2 = data[properties[p]];
+          let properties2 = Object.keys(data2);
+          confirmed[range - i] = data2[properties2[index]].total.confirmed;
+          deaths[range - i] = data2[properties2[index]].total.deceased;
+          recovered[range - i] = data2[properties2[index]].total.recovered;
+          vaccinated[range - i] = data2[properties2[index]].total.vaccinated;
+          date[range - i] = properties[p];
+        }
+      });
+  }
+  drawGraph();
+  async function drawGraph() {
+    await fetchStateData();
+    let my_chart = document.getElementById("chart").getContext("2d");
+    let covid_graph = new Chart(my_chart, {
+      type: "line",
+      data: {
+        labels: date,
+        datasets: [
+          {
+            label: "Confirmed",
+            data: confirmed,
+            fill: false,
+            borderColor: "#FFD700",
+            minBarLength: 100,
+          },
+          {
+            label: "Recovered",
+            data: recovered,
+            fill: false,
+            borderColor: "#2E8B57",
+            minBarLength: 100,
+          },
+          {
+            label: "Deaths",
+            data: deaths,
+            fill: false,
+            borderColor: "#FF0000",
+            minBarLength: 100,
+          },
+          {
+            label: "Vaccinated",
+            data: vaccinated,
+            fill: false,
+            borderColor: "#0a81ab",
+            minBarLength: 100,
+          },
+        ],
+      },
+      options: {
+        title: {
+          display: true,
+           text: state_name,
+          fontSize: 25,
+          responsive: true,
+          maintainAspectRatio: false,
+        },
+      },
+    });
+  }
+}
+

@@ -56,39 +56,49 @@
           <div class="latest-reports">
             <div class="state">
               <div class="name">Loading...</div>
+              <div class="change-state">Change</div>
               <div class="search-state hide">
                 <div class="search-box">
-                  <input type="text" id="search-input" placeholder="Search Country..." />
+                  <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search Country..."
+                  />
                   <img src="images/close.svg" alt="Close" class="close-btn" />
                 </div>
                 <div class="state-list"></div>
               </div>
             </div>
-            <div class="total-cases">
-              <div class="title">Total Cases</div>
-              <div class="value">0</div>
-              <div class="new-value">+0</div>
+            <div class="flex-container">
+              <div class="total-cases">
+                <div class="title">Total Cases</div>
+                <div class="value">0</div>
+                <div class="new-value">+0</div>
+              </div>
+              <div class="recovered">
+                <div class="title">Recovered</div>
+                <div class="value">0</div>
+                <div class="new-value">+0</div>
+              </div>
+              <div class="deaths">
+                <div class="title">Deaths</div>
+                <div class="value">0</div>
+                <div class="new-value">+0</div>
+              </div>
+              <div class="vaccinated">
+                <div class="title">Vaccinated</div>
+                <div class="value">0</div>
+                <div class="new-value">+0</div>
+              </div>
+              <div class="tested">
+                <div class="title">Tested</div>
+                <div class="value">0</div>
+                <div class="new-value">+0</div>
+              </div>
             </div>
-            <div class="recovered">
-              <div class="title">Recovered</div>
-              <div class="value">0</div>
-              <div class="new-value">+0</div>
-            </div>
-            <div class="deaths">
-              <div class="title">Deaths</div>
-              <div class="value">0</div>
-              <div class="new-value">+0</div>
-            </div>
-            <div class="vaccinated">
-              <div class="title">Vaccinated</div>
-              <div class="value">0</div>
-              <div class="new-value">+0</div>
-            </div>
-            <div class="tested">
-              <div class="title">Tested</div>
-              <div class="value">0</div>
-              <div class="new-value">+0</div>
-            </div>
+          </div>
+          <div class="state-chart">
+            <canvas id="chart"></canvas>
           </div>
         </div>
       </section>
