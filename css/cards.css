@@ -23,6 +23,14 @@ body {
   justify-content: space-evenly;
 }
 
+/* Graph Section */
+
+#page-one .graph {
+  width: 80%;
+}
+
+/* Stats Cards Section */
+
 .box {
   width: 25%;
   margin-bottom: 5%;
@@ -52,11 +60,57 @@ body {
   box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
-#map {
+/* Map Section */
+
+.map-container {
   width: 40%;
+}
+
+#map {
   margin-right: 1%;
 }
 
-#page-one .graph {
-  width: 80%;
+.legend-container {
+  margin-left: 50%;
+  width: 50%;
+}
+
+.legend {
+  color: black;
+  width: 100%;
+  font-family: arial;
+  font-size: 14px;
+}
+
+.legend_color {
+  display: table;
+  width: 100%;
+  background: white;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.legend_color li {
+  width: 20%;
+  height: 20px;
+  display: table-cell;
+}
+
+.legend_label {
+  display: table;
+  width: 100%;
+  padding: 0px;
+  padding-left: 10%;
+  padding-right: 10%;
+  list-style: none;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.legend_label li {
+  width: 25%;
+  height: 20px;
+  display: table-cell;
+  text-align: center;
 }
