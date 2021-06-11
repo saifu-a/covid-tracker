@@ -9,7 +9,7 @@ var simplemaps_countrymap_mapdata = {
     //State defaults
     state_description: "State description",
     state_color: "#e64e34",
-    state_hover_color: "#f3120a",
+    state_hover_color: "#3B729F",
     state_url: "https://simplemaps.com",
     border_size: 1.5,
     all_states_inactive: "no",
@@ -55,7 +55,7 @@ var simplemaps_countrymap_mapdata = {
     popup_opacity: 0.9,
     popup_shadow: 1,
     popup_corners: 5,
-    popup_font: "12px/1.5 Verdana, Arial, Helvetica, sans-serif",
+    popup_font: "14px/1.5 Verdana, Arial, Helvetica, sans-serif",
     popup_nocss: "no",
 
     //Advanced settings
@@ -287,11 +287,19 @@ function displayStateData(data) {
     let stateCode = states[state]["code"];
     let stateData = data[stateCode]["total"];
 
-    states[state]["description"] =
-      `Confirmed: ${stateData["confirmed"]} <br>` +
-      `Deceased: ${stateData["deceased"]} <br>` +
-      `Recovered: ${stateData["recovered"]} <br>` +
-      `Vaccinated: ${stateData["vaccinated"]}`;
+    states[state]["description"] = `
+      Confirmed: ${stateData["confirmed"]} <br>
+      Deceased: ${stateData["deceased"]} <br>
+      Recovered: ${stateData["recovered"]} <br>
+      Vaccinated(1st Dose): ${stateData["vaccinated1"]} <br>
+      Vaccinated(2nd Dose): ${stateData["vaccinated2"]}`;
+
+    let deaths = stateData["deceased"];
+    if (deaths < 100) states[state].color = "#1FAA59";
+    else if (deaths < 1000) states[state].color = "	#FF6263";
+    else if (deaths < 10000) states[state].color = "#D82E2F";
+    else if (deaths < 100000) states[state].color = "#D00000";
+    else states[state].color = "#FF0000";
   }
 }
 

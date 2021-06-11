@@ -4,114 +4,134 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
+html {
+  background-color: #fff;
+}
+
 .page-two {
   max-width: 1200px;
   margin: 0 auto;
 }
-.hide{
-   display: none; 
-} 
+
+.state-container {
+  margin-top: 5%;
+  padding-bottom: 1%;
+  background-color: #e6e6fa;
+}
+
+
+.hide {
+  display: none;
+}
+
 .latest-reports {
   display: flex;
   justify-content: space-between;
-  height:200px;
+  height: 200px;
   padding-top: 100px;
   padding-left: 20px;
   padding-right: 30px;
   color: black;
 }
-.flex-container{
+
+.flex-container {
+  margin-right: 8%;
   padding: 5px 5px 0 5px;
-  display: inline-flex;
-  flex-direction: row;
-  flex-wrap: row wrap;
+  display: flex;
+  /* flex-direction: row; */
+  /* flex-wrap: row wrap; */
   gap: 12px;
-  justify-content: center;
-  height:200px;
+  justify-content: space-evenly;
+  height: 200px;
 }
-.state-chart{
+
+.state-chart {
   width: 80%;
   height: 70vh;
   min-height: 500px;
-  margin: 0 auto;
-  /* padding: 50px 0; */
-  padding-top: 100px;
+  margin: 5% auto;
 }
+
 .total-cases,
 .recovered,
 .deaths,
-.vaccinated,
-.tested{
+.vaccinated1,
+.tested {
   width: 180px;
   height: 150px;
   font-weight: bold;
   text-align: center;
 }
-.state{
+
+.state {
   font-weight: bold;
+  margin-left: 9%;
 }
+
 .title {
   font-size: 25px;
 }
+
 .name {
   font-size: 40px;
   align-content: flex-start;
 }
+
+/* Value Section */
+
+.value {
+  margin: 20px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .total-cases .value {
-  font-size: 20px;
-  font-weight: bold;
-  color: yellow;
-  position: relative;
-  top: 20px;
+  color: rgb(255, 215, 0);
 }
+
 .recovered .value {
-  font-size: 20px;
-  font-weight: bold;
-  color: green;
-  position: relative;
-  top: 20px;
+  color: rgb(46, 139, 87);
 }
+
 .deaths .value {
-  font-size: 20px;
-  font-weight: bold;
-  color: #f44336;
-  position: relative;
-  top: 20px;
+  color: rgb(255, 0, 0);
 }
-.vaccinated .value {
-  font-size: 20px;
-  font-weight: bold;
-  color: blue;
-  position: relative;
-  top: 20px;
+
+.vaccinated1 .value {
+  color: rgb(10, 129, 171);
 }
-.tested .value {
-  font-size: 20px;
-  font-weight: bold;
-  color: purple;
-  position: relative;
-  top: 20px;
-}
+
 .new-value {
   font-size: 15px;
   position: relative;
   top: 30px;
 }
+
+/* Search Box Section */
+
+.close-btn {
+  margin-left: 4%;
+}
+
 .search-state {
   align-content: flex-start;
 }
+
 .search-box {
   align-content: flex-start;
   align-items: center;
   justify-content: space-between;
   width: 400px;
   height: 30px;
-  background-color:grey;
+  background-color: grey;
   z-index: 1;
 }
+
 ::placeholder {
   color: black;
 }
+
 .search-box input {
   align-content: flex-start;
   width: 360px;
@@ -122,50 +142,61 @@
   padding-left: 15px;
   font-size: 1.1em;
 }
+
 .search-box img {
   align-content: flex-start;
   width: 20px;
   padding-right: 5px;
   cursor: pointer;
 }
+
 .state-list {
   display: flex;
   align-content: flex-start;
   width: 400px;
   height: 300px;
-  background-color: transparent;
+  background-color: rgba(243, 241, 239, 0.8);
   opacity: 0.9;
   overflow-y: scroll;
 }
+
 .state-list ul {
   width: 100%;
 }
+
 .state-list ul li {
   list-style: none;
   cursor: pointer;
   padding: 10px;
   color: black;
 }
+
 .state-list ul li:hover {
   color: orangered;
-  /* border-left: 1px solid black; */
+  border-left: 1px solid black;
 }
+
 /* SCROLL BAR */
 .state-list::-webkit-scrollbar {
   width: 10px;
 }
+
+/* Track */
 .state-list::-webkit-scrollbar-track {
   background: grey;
 }
+
 /* Handle */
 .state-list::-webkit-scrollbar-thumb {
   background: blue;
 }
+
 /* Handle on hover */
 .state-list::-webkit-scrollbar-thumb:hover {
   background: blue;
 }
-.change-state{
+
+.change-state {
   align-content: flex-start;
   cursor: pointer;
 }
