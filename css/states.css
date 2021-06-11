@@ -15,11 +15,10 @@ html {
 }
 
 .state-container {
-  margin-top: 5%;
+  margin-top: 2%;
   padding-bottom: 1%;
   background-color: #e6e6fa;
 }
-
 
 .hide {
   display: none;
