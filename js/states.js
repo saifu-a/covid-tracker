@@ -1,3 +1,4 @@
+// Array of States with Code
 let stateList = [
   { name: "Andaman and Nicobar Islands", code: "AN" },
   { name: "Andhra Pradesh", code: "AP" },
@@ -58,10 +59,10 @@ function createStateList() {
 
     document.getElementById(
       `${ul_list_id}`
-    ).innerHTML += `<li onclick="fetchData('${state.name}')" id="${state.name}">
-            ${state.name}</li> `;
+    ).innerHTML += `<li onclick="fetchData('${state.code}')" id="${state.name}">${state.name}</li>`;
   });
 }
+
 let num_of_ul_lists = 2;
 createStateList();
 
@@ -98,174 +99,166 @@ function resetStateList() {
   });
 }
 
+// SELECT ALL ELEMENTS
 const state_name_element = document.querySelector(".state .name");
+
 const total_cases_element = document.querySelector(".total-cases .value");
 const new_cases_element = document.querySelector(".total-cases .new-value");
+
 const recovered_element = document.querySelector(".recovered .value");
 const new_recovered_element = document.querySelector(".recovered .new-value");
+
 const deaths_element = document.querySelector(".deaths .value");
 const new_deaths_element = document.querySelector(".deaths .new-value");
-const vaccinated_element = document.querySelector(".vaccinated .value");
-const new_vaccinated_element = document.querySelector(".vaccinated .new-value");
-const tested_element = document.querySelector(".tested .value");
-const new_tested_element = document.querySelector(".tested .new-value");
 
-let total_cases,
-  recovered_cases,
-  death_cases,
-  new_confirmed_cases,
-  new_recovered_cases,
-  new_death_cases,
-  state_name,
-  vaccinated,
-  tested,
-  new_vaccinated,
-  new_tested,
-  j = 0;
-async function fetchData(state1) {
-  await fetch("https://api.covid19india.org/v4/min/data.min.json")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      stateList.forEach((state) => {
-        let properties = Object.keys(data);
-        if (state1 == state.name) {
-          for (let j = 0; j < properties.length; j++) {
-            if (state.code == properties[j]) {
-              state_name = state1;
-              total_cases = data[properties[j]].total.confirmed;
-              recovered_cases = data[properties[j]].total.recovered;
-              death_cases = data[properties[j]].total.deceased;
-              new_confirmed_cases = data[properties[j]].delta7.confirmed;
-              new_recovered_cases = data[properties[j]].delta7.recovered;
-              new_death_cases = data[properties[j]].delta7.deceased;
-              vaccinated = data[properties[j]].total.vaccinated;
-              tested = data[properties[j]].total.tested;
-              new_vaccinated = data[properties[j]].delta7.vaccinated;
-              new_tested = data[properties[j]].delta7.tested;
-            }
-          }
-        }
-      });
-      updateUI(state1);
-    });
+const vaccinated1_element = document.querySelector(".vaccinated1 .value");
+const new_vaccinated1_element = document.querySelector(
+  ".vaccinated1 .new-value"
+);
+
+const ctx = document.getElementById("chart").getContext("2d");
+
+// APP VARIABLES
+let app_data = [],
+  cases_list = [],
+  recovered_list = [],
+  deaths_list = [],
+  vaccinated1_list = [],
+  vaccinated2_list = [],
+  tested_list = [],
+  dates_list = [],
+  formattedDates_list = [];
+
+// GET USERS STATE CODE
+let stateCode = geoplugin_regionCode();
+let userState;
+stateList.forEach((state) => {
+  if (state.code == stateCode) {
+    userState = state.name;
+  }
+});
+
+async function fetchData(stateCode) {
+  stateList.forEach((state) => {
+    if (state.code == stateCode) {
+      userState = state.name;
+    }
+  });
+
+  let response = await fetch(
+    "https://api.covid19india.org/v4/min/timeseries.min.json"
+  );
+  let data = await response.json();
+
+  let stateData = data[stateCode];
+
+  for (let date in stateData["dates"]) {
+    dates_list.push(date);
+    formattedDates_list.push(moment(date).format("Do MMM YY"));
+    cases_list.push(stateData["dates"][date]["total"]["confirmed"] || 0);
+    recovered_list.push(stateData["dates"][date]["total"]["recovered"] || 0);
+    deaths_list.push(stateData["dates"][date]["total"]["deceased"] || 0);
+    vaccinated1_list.push(
+      stateData["dates"][date]["total"]["vaccinated1"] || 0
+    );
+  }
+  updateUI();
 }
-let l = stateList.length;
-let user_state = stateList[l - 1].name;
-fetchData(user_state);
 
-function updateUI(state) {
+fetchData(stateCode);
+
+// UPDATE UI FUNCTION
+function updateUI() {
   updateStats();
-  StateLineChart(state);
+  axesLinearChart();
 }
 
 function updateStats() {
-  state_name_element.innerHTML = state_name;
-  total_cases_element.innerHTML = total_cases;
-  new_cases_element.innerHTML = `+${new_confirmed_cases}`;
-  recovered_element.innerHTML = recovered_cases;
-  new_recovered_element.innerHTML = `+${new_recovered_cases}`;
-  deaths_element.innerHTML = death_cases;
-  new_deaths_element.innerHTML = `+${new_death_cases}`;
-  vaccinated_element.innerHTML = vaccinated;
-  new_vaccinated_element.innerHTML = `+${new_vaccinated}`;
-  tested_element.innerHTML = tested;
-  new_tested_element.innerHTML = `+${new_tested}`;
+  const total_cases = cases_list[cases_list.length - 1];
+  const new_confirmed_cases = total_cases - cases_list[cases_list.length - 2];
+
+  const total_recovered = recovered_list[recovered_list.length - 1];
+  const new_recovered_cases =
+    total_recovered - recovered_list[recovered_list.length - 2];
+
+  const total_deaths = deaths_list[deaths_list.length - 1];
+  const new_deaths_cases = total_deaths - deaths_list[deaths_list.length - 2];
+
+  const total_vaccinated1 = vaccinated1_list[vaccinated1_list.length - 1];
+  const new_vaccinated1_cases =
+    total_vaccinated1 - vaccinated1_list[vaccinated1_list.length - 2];
+
+  state_name_element.innerHTML = userState;
+  total_cases_element.innerHTML = total_cases.toLocaleString("en-IN");
+  new_cases_element.innerHTML = `+${new_confirmed_cases.toLocaleString(
+    "en-IN"
+  )}`;
+
+  recovered_element.innerHTML = total_recovered.toLocaleString("en-IN");
+  new_recovered_element.innerHTML = `+${new_recovered_cases.toLocaleString(
+    "en-IN"
+  )}`;
+
+  deaths_element.innerHTML = total_deaths.toLocaleString("en-IN");
+  new_deaths_element.innerHTML = `+${new_deaths_cases.toLocaleString("en-IN")}`;
+
+  vaccinated1_element.innerHTML = total_vaccinated1.toLocaleString("en-IN");
+  new_vaccinated1_element.innerHTML = `+${new_vaccinated1_cases.toLocaleString(
+    "en-IN"
+  )}`;
 }
 
-function StateLineChart(state) {
-  let confirmed = [];
-  let deaths = [];
-  let recovered = [];
-  let date = [];
-  let vaccinated = [];
-  let index;
-  let state_name;
-  async function fetchStateData() {
-    await fetch("https://api.covid19india.org/v4/min/data-all.min.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        stateList.forEach((state1) => {
-          if (state == state1.name) {
-            state_name = state;
-            index = stateList.findIndex((element) => {
-              if (element.name === state) {
-                return true;
-              }
-            });
-            if (index >= 33) {
-              index = index + 1;
-            }
-          }
-        });
-        const length = Object.keys(data).length - 1;
-        const range = 20;
-        const interval = 6;
-        let properties = Object.keys(data);
-        for (let i = range; i >= 0; i--) {
-          let p = length - i * interval;
-          let data2 = data[properties[p]];
-          let properties2 = Object.keys(data2);
-          confirmed[range - i] = data2[properties2[index]].total.confirmed;
-          deaths[range - i] = data2[properties2[index]].total.deceased;
-          recovered[range - i] = data2[properties2[index]].total.recovered;
-          vaccinated[range - i] = data2[properties2[index]].total.vaccinated;
-          date[range - i] = properties[p];
-        }
-      });
+// UPDATE CHART
+let my_chart;
+function axesLinearChart() {
+  if (my_chart) {
+    my_chart.destroy();
   }
-  drawGraph();
-  async function drawGraph() {
-    await fetchStateData();
-    let my_chart = document.getElementById("chart").getContext("2d");
-    let covid_graph = new Chart(my_chart, {
-      type: "line",
-      data: {
-        labels: date,
-        datasets: [
-          {
-            label: "Confirmed",
-            data: confirmed,
-            fill: false,
-            borderColor: "#FFD700",
-            minBarLength: 100,
-          },
-          {
-            label: "Recovered",
-            data: recovered,
-            fill: false,
-            borderColor: "#2E8B57",
-            minBarLength: 100,
-          },
-          {
-            label: "Deaths",
-            data: deaths,
-            fill: false,
-            borderColor: "#FF0000",
-            minBarLength: 100,
-          },
-          {
-            label: "Vaccinated",
-            data: vaccinated,
-            fill: false,
-            borderColor: "#0a81ab",
-            minBarLength: 100,
-          },
-        ],
-      },
-      options: {
-        title: {
-          display: true,
-           text: state_name,
-          fontSize: 25,
-          responsive: true,
-          maintainAspectRatio: false,
+
+  let last60 = formattedDates_list.length - 61;
+
+  my_chart = new Chart(ctx, {
+    type: "line",
+    data: {
+      datasets: [
+        {
+          label: "Confirmed",
+          data: cases_list.slice(last60),
+          fill: true,
+          borderColor: "rgb(255, 215, 0)",
+          backgroundColor: "rgba(255, 215, 0, 0.5)",
+          minBarLength: 100,
         },
-      },
-    });
-  }
+        {
+          label: "Recovered",
+          data: recovered_list.slice(last60),
+          fill: true,
+          borderColor: "rgb(46, 139, 87)",
+          backgroundColor: "rgba(46, 139, 87, 0.5)",
+          minBarLength: 100,
+        },
+        {
+          label: "Deaths",
+          data: deaths_list.slice(last60),
+          fill: true,
+          borderColor: "rgb(255, 0, 0)",
+          backgroundColor: "rgba(255, 0, 0, 0.5)",
+          minBarLength: 100,
+        },
+        {
+          label: "Vaccinated",
+          data: vaccinated1_list.slice(last60),
+          fill: true,
+          borderColor: "rgb(10, 129, 171)",
+          backgroundColor: "rgba(10, 129, 171, 0.5)",
+          minBarLength: 100,
+        },
+      ],
+      labels: formattedDates_list.slice(last60),
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+    },
+  });
 }
-
