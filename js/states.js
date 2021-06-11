@@ -259,6 +259,31 @@ function axesLinearChart() {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              fontColor: "black",
+              fontSize: 14,
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontColor: "black",
+              fontSize: 14,
+            },
+          },
+        ],
+      },
+      legend: {
+        display: true,
+        labels: {
+          fontColor: "black",
+          fontSize: 14,
+        },
+      },
     },
   });
 }
