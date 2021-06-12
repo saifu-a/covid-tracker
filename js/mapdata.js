@@ -55,7 +55,7 @@ var simplemaps_countrymap_mapdata = {
     popup_opacity: 0.9,
     popup_shadow: 1,
     popup_corners: 5,
-    popup_font: "14px/1.5 Verdana, Arial, Helvetica, sans-serif",
+    popup_font: "15px/1.5 Verdana, Arial, Helvetica, sans-serif",
     popup_nocss: "no",
 
     //Advanced settings
@@ -257,13 +257,6 @@ var simplemaps_countrymap_mapdata = {
       description: " ",
     },
   },
-  locations: {
-    // "0": {
-    //   lat: 18.987807,
-    //   lng: 72.836447,
-    //   name: "Mumbai"
-    // }
-  },
   labels: {},
   legend: {
     entries: [],
@@ -288,11 +281,15 @@ function displayStateData(data) {
     let stateData = data[stateCode]["total"];
 
     states[state]["description"] = `
-      Confirmed: ${stateData["confirmed"]} <br>
-      Deceased: ${stateData["deceased"]} <br>
-      Recovered: ${stateData["recovered"]} <br>
-      Vaccinated(1st Dose): ${stateData["vaccinated1"]} <br>
-      Vaccinated(2nd Dose): ${stateData["vaccinated2"]}`;
+      Confirmed: ${stateData["confirmed"].toLocaleString("en-IN")} <br>
+      Deceased: ${stateData["deceased"].toLocaleString("en-IN")} <br>
+      Recovered: ${stateData["recovered"].toLocaleString("en-IN")} <br>
+      Vaccinated(1st Dose): ${stateData["vaccinated1"].toLocaleString(
+        "en-IN"
+      )} <br>
+      Vaccinated(2nd Dose): ${stateData["vaccinated2"].toLocaleString(
+        "en-IN"
+      )}`;
 
     let deaths = stateData["deceased"];
     if (deaths < 100) states[state].color = "#1FAA59";
