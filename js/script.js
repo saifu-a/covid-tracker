@@ -1,3 +1,15 @@
+// Preloader Logic
+
+let loader = document.querySelector(".loader");
+
+window.addEventListener("load", vanish);
+
+function vanish() {
+  loader.classList.add("disppear");
+}
+
+// India Stats
+
 let confirmed = [];
 let deaths = [];
 let recovered = [];
