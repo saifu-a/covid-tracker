@@ -25,6 +25,7 @@ body {
 
 #page-one .graph {
   margin: 5% auto;
+  min-height: 410px;
   width: 90%;
 }
 
@@ -48,6 +49,7 @@ body {
 }
 
 .content {
+  min-height: 140px;
   padding: 20px 10px;
   text-align: center;
   font-size: 28px;
@@ -74,7 +76,7 @@ body {
   margin-left: 65%;
   font-weight: 700;
   font-size: 1.5rem;
-  color: rgb(255,0,0);
+  color: rgb(255, 0, 0);
 }
 
 .legend-container {

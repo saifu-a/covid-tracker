@@ -15,7 +15,7 @@ async function fetchData() {
 
       document.getElementById(
         "confirmed"
-      ).innerHTML += `<p>${confirmed.toLocaleString(
+      ).innerHTML = `<p>${confirmed.toLocaleString(
         "en-IN"
       )}<br><br><small style="font-weight: bold;color:blue;">${c}${new_confirmed.toLocaleString(
         "en-IN"
@@ -26,7 +26,7 @@ async function fetchData() {
 
       document.getElementById(
         "recovered"
-      ).innerHTML += `<p>${recovered.toLocaleString(
+      ).innerHTML = `<p>${recovered.toLocaleString(
         "en-IN"
       )}<br><br><small style="font-weight: bold;color:green;">${c}${new_recovered.toLocaleString(
         "en-IN"
@@ -37,7 +37,7 @@ async function fetchData() {
 
       document.getElementById(
         "deceased"
-      ).innerHTML += `<p>${deceased.toLocaleString(
+      ).innerHTML = `<p>${deceased.toLocaleString(
         "en-IN"
       )}<br><br><small style="font-weight: bold;color:red;">${c}${new_deceased.toLocaleString(
         "en-IN"
