@@ -9,6 +9,8 @@
   border-radius: 15px;
   box-shadow: 0 0 10px 5px lightgray;
   transition: all 0.3s ease 0s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
 
 .card img {
@@ -34,18 +36,42 @@
 
 .card-one {
   background-color: #cbf1f5;
+  animation-name: fadeInRight;
 }
 
 .card-one:hover {
   background-color: #a6e3e9;
-  transform: scale(1.05);
 }
 
 .card-two {
   background-color: #ffe2e2;
+  animation-name: fadeInLeft;
 }
 
 .card-two:hover {
   background-color: #fcbad3;
-  transform: scale(1.05);
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }

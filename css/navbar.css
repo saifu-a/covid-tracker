@@ -67,14 +67,6 @@
   transform: scale(1.05);
 }
 
-#page-two {
-  background-color: #eee;
-}
-
-#page-four {
-  background-color: #eee;
-}
-
 .top-heading-container {
   color: white;
   text-shadow: 0.075em 0.08em 0.1em rgba(0, 0, 0, 1);
