@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="stylesheet" href="css/states.css" />
+    <link rel="stylesheet" href="css/barchart.css" />
   </head>
   <body>
     <!-- Preloader Section -->
@@ -167,7 +168,36 @@
           </div>
         </div>
       </section>
-      <section id="page-three"></section>
+
+      <!-- Page Three -->
+      <section id="page-three">
+        <!-- Bar Chart Container -->
+        <div class="barchart-container">
+          <div class="chart__wrapper">
+            <canvas class="bar-chart" id="confirmed-chart"></canvas>
+          </div>
+
+          <div class="chart__wrapper">
+            <canvas class="bar-chart" id="deceased-chart"></canvas>
+          </div>
+
+          <div class="chart__wrapper">
+            <canvas class="bar-chart" id="recovered-chart"></canvas>
+          </div>
+
+          <div class="chart__wrapper">
+            <canvas class="bar-chart" id="vaccinated-chart"></canvas>
+          </div>
+
+          <div class="chart__wrapper">
+            <canvas class="bar-chart" id="recovery-rate-chart"></canvas>
+          </div>
+
+          <div class="chart__wrapper">
+            <canvas class="bar-chart" id="death-rate-chart"></canvas>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Geoplugin -->
@@ -189,5 +219,6 @@
     <script src="js/mapdata.js"></script>
     <script src="js/countrymap.js"></script>
     <script src="js/states.js"></script>
+    <script src="js/barchart.js"></script>
   </body>
 </html>
