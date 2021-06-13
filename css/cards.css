@@ -33,7 +33,7 @@ body {
 
 .box {
   width: 25%;
-  margin-bottom: 5%;
+  margin: 5% auto;
   background: #fff;
   border: 1px solid #ccc;
   transition: 0.3s;
@@ -54,6 +54,22 @@ body {
   text-align: center;
   font-size: 28px;
   font-weight: bolder;
+}
+
+.content small {
+  font-weight: 700;
+}
+
+#confirmed small {
+  color: rgb(255, 150, 0);
+}
+
+#recovered small {
+  color: green;
+}
+
+#deceased small {
+  color: red;
 }
 
 .box:hover {

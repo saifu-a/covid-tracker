@@ -17,7 +17,6 @@ html {
 .state-container {
   margin-top: 2%;
   padding-bottom: 1%;
-  background-color: #e6e6fa;
 }
 
 .hide {
@@ -67,7 +66,7 @@ html {
 }
 
 .title {
-  font-size: 25px;
+  font-size: 2rem;
 }
 
 .name {
@@ -79,16 +78,16 @@ html {
 
 .value {
   margin: 20px 0 0;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
 .total-cases .value {
-  color: rgb(255, 215, 0);
+  color: rgb(255, 150, 0);
 }
 
 .recovered .value {
-  color: rgb(46, 139, 87);
+  color: rgb(0, 128, 0);
 }
 
 .deaths .value {
@@ -100,7 +99,7 @@ html {
 }
 
 .new-value {
-  font-size: 15px;
+  font-size: 1.3rem;
   margin-top: 20px;
 }
 
