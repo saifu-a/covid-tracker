@@ -14,8 +14,12 @@ html {
   margin: 0 auto;
 }
 
+.middle-heading-container {
+  padding-top: 2%;
+}
+
 .state-container {
-  margin-top: 2%;
+  /* margin-top: 2%; */
   padding-bottom: 1%;
 }
 
@@ -27,7 +31,7 @@ html {
   display: flex;
   justify-content: space-between;
   height: 200px;
-  padding-top: 100px;
+  /* padding-top: 100px; */
   padding-left: 20px;
   padding-right: 30px;
   color: black;

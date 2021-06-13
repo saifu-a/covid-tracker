@@ -66,3 +66,11 @@
 .logo:hover {
   transform: scale(1.05);
 }
+
+#page-two {
+  background-color: #eee;
+}
+
+#page-four {
+  background-color: #eee;
+}
