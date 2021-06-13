@@ -33,7 +33,7 @@ body {
 
 .box {
   width: 25%;
-  margin: 5% auto;
+  margin: 2rem 0;
   background: #fff;
   border: 1px solid #ccc;
   transition: 0.3s;

@@ -8,6 +8,14 @@ function vanish() {
   loader.classList.add("disppear");
 }
 
+// Update Last Updated DateTime
+
+const datetime = document.getElementById("date-time-indicator");
+let date = new Date();
+let today = moment(date).format("Do MMM YYYY");
+
+datetime.innerHTML += ` ${today} 11:00 AM`;
+
 // India Stats
 
 let confirmed = [];
@@ -48,7 +56,7 @@ async function drawGraph() {
         {
           label: "Total Confirmed Cases",
           data: confirmed,
-          fill: true,
+          fill: false,
           borderColor: "#FFD700",
           backgroundColor: "rgba(255,215,0, 0.5)",
           minBarLength: 100,
@@ -56,7 +64,7 @@ async function drawGraph() {
         {
           label: "Total Recovered",
           data: recovered,
-          fill: true,
+          fill: false,
           borderColor: "#2E8B57",
           backgroundColor: "rgba(46,139,87, 0.5)",
           minBarLength: 100,
@@ -64,7 +72,7 @@ async function drawGraph() {
         {
           label: "Total Deaths",
           data: deaths,
-          fill: true,
+          fill: false,
           borderColor: "#FF0000",
           backgroundColor: "rgba(255,0,0,0.5)",
           minBarLength: 100,
