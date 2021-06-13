@@ -83,18 +83,41 @@
 }
 
 .top-heading-container p {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: fadeInLeft;
   padding-top: 1rem;
   font-size: 1.25rem;
   line-height: 1.25;
 }
 
 .top-heading-container h4 {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: fadeInDown;
   padding-top: 2rem;
 }
 
 .top-heading {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: fadeInRight;
   font-size: 2.3rem;
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
+}
+
+.middle-heading-container {
+  padding-left: 5%;
+  font-size: 1.5rem;
+}
+
+.middle-heading {
+  font-family: "Lato", sans-serif;
+}
+
+#page-two .middle-heading-container {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }

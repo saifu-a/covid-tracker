@@ -38,7 +38,23 @@ body {
   border: 1px solid #ccc;
   transition: 0.3s;
   font-family: "Roboto", sans-serif;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
 }
+
+.box-one {
+  animation-name: fadeInRight;
+}
+
+.box-two {
+  animation-name: fadeInUp;
+}
+
+.box-three {
+  animation-name: fadeInLeft;
+}
+
+/* Card Content Section */
 
 .header {
   text-align: center;
@@ -80,6 +96,9 @@ body {
 /* Map Section */
 
 .map-container {
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-name: fadeInUp;
   width: 40%;
 }
 
