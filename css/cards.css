@@ -98,7 +98,7 @@ body {
 .map-container {
   animation-duration: 1s;
   animation-delay: 0.5s;
-  animation-name: fadeInUp;
+  animation-name: fadeInLeft;
   width: 40%;
 }
 

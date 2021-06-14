@@ -24,6 +24,13 @@
   }
 }
 
+/* Dark Mode Section */
+
+.dark-mode {
+  background-color: #131516;
+  color: #fff;
+}
+
 /* Navbar Section */
 
 .navbar header {
@@ -45,14 +52,13 @@
   font-family: "Lato", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #468dff;
+  color: rgb(70, 141, 255);
   transition: all 0.3s ease 0s;
 }
 
 .navbar li:hover,
 .navbar li:focus {
   color: lightcoral;
-  transform: scale(1.1);
 }
 
 .logo {
@@ -66,6 +72,78 @@
 .logo:hover {
   transform: scale(1.05);
 }
+
+/* Toggler Switch Section */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  bottom: 4px;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2196f3;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "☀️";
+  font-size: 20px;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #555;
+}
+
+input:checked + .slider:before {
+  content: "🌑";
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #555;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Heading Section */
 
 .top-heading-container {
   color: white;
@@ -83,25 +161,16 @@
 }
 
 .top-heading-container p {
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-name: fadeInLeft;
   padding-top: 1rem;
   font-size: 1.25rem;
   line-height: 1.25;
 }
 
 .top-heading-container h4 {
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-name: fadeInDown;
   padding-top: 2rem;
 }
 
 .top-heading {
-  animation-duration: 1s;
-  animation-delay: 0.5s;
-  animation-name: fadeInRight;
   font-size: 2.3rem;
   margin: 0;
   padding: 0;
@@ -115,6 +184,11 @@
 
 .middle-heading {
   font-family: "Lato", sans-serif;
+  color: rgb(70, 141, 255);
+}
+
+#page-one {
+  overflow: hidden;
 }
 
 #page-two .middle-heading-container {

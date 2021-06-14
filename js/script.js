@@ -8,6 +8,31 @@ function vanish() {
   loader.classList.add("disppear");
 }
 
+// Dark and Light Mode Toggle Logic
+
+let navElement = document.querySelector(".navbar");
+let colorSwitch = document.querySelector("#input-color-switch");
+
+colorSwitch.addEventListener("click", checkMode);
+
+function checkMode() {
+  if (colorSwitch.checked) {
+    darkModeOn();
+  } else {
+    darkModeOff();
+  }
+}
+
+function darkModeOn() {
+  navElement.classList.add("dark-mode");
+  document.body.classList.add("dark-mode");
+}
+
+function darkModeOff() {
+  navElement.classList.remove("dark-mode");
+  document.body.classList.remove("dark-mode");
+}
+
 // Update Last Updated DateTime
 
 const datetime = document.getElementById("date-time-indicator");
