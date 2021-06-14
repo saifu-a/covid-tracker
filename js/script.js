@@ -125,13 +125,8 @@ async function drawGraph() {
       ],
     },
     options: {
-      // title: {
-      //   display: true,
-      //   text: "India",
-      //   fontSize: 25,
-      //   responsive: true,
-      //   maintainAspectRatio: false,
-      // },
+      responsive: true,
+      maintainAspectRatio: false,
     },
   });
 }
