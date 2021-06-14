@@ -263,7 +263,6 @@ function axesLinearChart() {
         yAxes: [
           {
             ticks: {
-              fontColor: "black",
               fontSize: 14,
             },
           },
@@ -271,7 +270,6 @@ function axesLinearChart() {
         xAxes: [
           {
             ticks: {
-              fontColor: "black",
               fontSize: 14,
             },
           },
@@ -280,7 +278,6 @@ function axesLinearChart() {
       legend: {
         display: true,
         labels: {
-          fontColor: "black",
           fontSize: 14,
         },
       },

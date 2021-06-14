@@ -10,7 +10,8 @@ function vanish() {
 
 // Dark and Light Mode Toggle Logic
 
-let navElement = document.querySelector(".navbar");
+let boxElements = document.querySelectorAll(".box");
+let boxHeaderElements = document.querySelectorAll(".box .header");
 let colorSwitch = document.querySelector("#input-color-switch");
 
 colorSwitch.addEventListener("click", checkMode);
@@ -24,12 +25,31 @@ function checkMode() {
 }
 
 function darkModeOn() {
-  navElement.classList.add("dark-mode");
+  for (let boxElement of boxElements) {
+    boxElement.setAttribute("style", "border: 1px solid #4c4c4c");
+  }
+
+  for (let boxHeaderElement of boxHeaderElements) {
+    boxHeaderElement.setAttribute(
+      "style",
+      "background-image: linear-gradient(to right, rgb(165, 0, 37), rgb(178, 27, 0));"
+    );
+  }
+
   document.body.classList.add("dark-mode");
 }
 
 function darkModeOff() {
-  navElement.classList.remove("dark-mode");
+  for (let boxElement of boxElements) {
+    boxElement.setAttribute("style", "border: 1px solid #ccc");
+  }
+
+  for (let boxHeaderElement of boxHeaderElements) {
+    boxHeaderElement.setAttribute(
+      "style",
+      "background: linear-gradient(to right, #ff416c, #ff4b2b);"
+    );
+  }
   document.body.classList.remove("dark-mode");
 }
 
