@@ -13,6 +13,9 @@
       rel="stylesheet"
     />
 
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
 
@@ -101,7 +104,7 @@
             </div>
 
             <!-- India Graph -->
-            <div class="graph">
+            <div data-aos="fade-right" class="graph">
               <canvas id="line-chart"></canvas>
             </div>
           </div>
@@ -139,7 +142,7 @@
         <!-- State Stats Container -->
         <div class="state-container">
           <!-- Middle Heading Container -->
-          <div class="middle-heading-container">
+          <div data-aos="fade-right" class="middle-heading-container">
             <svg
               class="svg search-svg"
               version="1.1"
@@ -212,7 +215,7 @@
           <div class="stats">
             <div class="latest-reports">
               <!-- State Search Box -->
-              <div class="state">
+              <div data-aos="fade-right" class="state">
                 <div class="name">Loading...</div>
                 <div class="change-state">Change</div>
                 <div class="search-state hide">
@@ -230,25 +233,33 @@
 
               <!-- Container State Stats -->
               <div class="flex-container">
-                <div class="total-cases">
+                <div data-aos="fade-left" class="total-cases">
                   <div class="title">Total Cases</div>
                   <div class="value">0</div>
                   <div class="new-value">+0</div>
                 </div>
 
-                <div class="recovered">
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="100"
+                  class="recovered"
+                >
                   <div class="title">Recovered</div>
                   <div class="value">0</div>
                   <div class="new-value">+0</div>
                 </div>
 
-                <div class="deaths">
+                <div data-aos="fade-left" data-aos-delay="200" class="deaths">
                   <div class="title">Deaths</div>
                   <div class="value">0</div>
                   <div class="new-value">+0</div>
                 </div>
 
-                <div class="vaccinated1">
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="300"
+                  class="vaccinated1"
+                >
                   <div class="title">Vaccinated</div>
                   <div class="value">0</div>
                   <div class="new-value">+0</div>
@@ -256,7 +267,7 @@
               </div>
             </div>
             <!-- State Data Line Chart  -->
-            <div class="state-chart">
+            <div data-aos="fade-down" class="state-chart">
               <canvas id="chart"></canvas>
             </div>
           </div>
@@ -266,7 +277,7 @@
       <!-- Page Three -->
       <section id="page-three">
         <!-- Middle Heading Container -->
-        <div class="middle-heading-container">
+        <div data-aos="fade-right" class="middle-heading-container">
           <svg
             class="svg graph-svg"
             version="1.1"
@@ -384,27 +395,27 @@
 
         <!-- Bar Chart Container -->
         <div class="barchart-container">
-          <div class="chart__wrapper">
+          <div data-aos="fade-right" class="chart__wrapper">
             <canvas class="bar-chart" id="confirmed-chart"></canvas>
           </div>
 
-          <div class="chart__wrapper">
+          <div data-aos="fade-left" class="chart__wrapper">
             <canvas class="bar-chart" id="deceased-chart"></canvas>
           </div>
 
-          <div class="chart__wrapper">
+          <div data-aos="fade-right" class="chart__wrapper">
             <canvas class="bar-chart" id="recovered-chart"></canvas>
           </div>
 
-          <div class="chart__wrapper">
+          <div data-aos="fade-left" class="chart__wrapper">
             <canvas class="bar-chart" id="vaccinated-chart"></canvas>
           </div>
 
-          <div class="chart__wrapper">
+          <div data-aos="fade-right" class="chart__wrapper">
             <canvas class="bar-chart" id="recovery-rate-chart"></canvas>
           </div>
 
-          <div class="chart__wrapper">
+          <div data-aos="fade-left" class="chart__wrapper">
             <canvas class="bar-chart" id="death-rate-chart"></canvas>
           </div>
         </div>
@@ -423,6 +434,9 @@
 
     <!-- Moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Scripts -->
     <script src="js/script.js"></script>

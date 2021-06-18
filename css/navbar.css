@@ -35,7 +35,7 @@
 .middle-heading-container {
   display: flex;
   align-items: center;
-  padding-left: 5%;
+  padding: 5%;
   font-size: 1.5rem;
 }
 
@@ -56,13 +56,10 @@
   color: rgb(70, 141, 255);
 }
 
-#page-one {
+#page-one,
+#page-two,
+#page-three {
   overflow: hidden;
-}
-
-#page-two .middle-heading-container {
-  padding-top: 5%;
-  padding-bottom: 5%;
 }
 
 /* Preloader Section */
