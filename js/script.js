@@ -1,7 +1,3 @@
-// AOS Init
-
-AOS.init();
-
 // Preloader Logic
 
 let loader = document.querySelector(".loader");
