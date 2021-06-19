@@ -129,6 +129,27 @@
   color: lightcoral;
 }
 
+/* Sub-menu part of Helpline page */
+.navbar ul li{
+  position: relative;
+}
+
+.navbar ul li ul{
+  display: none;
+  position: absolute;
+  background: #DEE4E7;
+  padding: 10px;
+}
+
+.navbar ul li:hover ul{
+  display: block;
+}
+
+.navbar ul li ul li{
+  width: 240px;
+  line-height: 1.7em;
+}
+
 .logo {
   cursor: pointer;
   width: 20%;

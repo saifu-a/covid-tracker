@@ -1,0 +1,43 @@
+table,th,tr,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    border-spacing: 5px;
+    text-align: center;
+}
+
+.num{
+    color: blue;
+}
+tr :hover{
+    transform: scale(1.09);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+    color: crimson;
+}
+td{
+    font-weight: bold;
+}
+th{
+    font-size: 20px;
+    font-weight: bolder;
+    height: 40px;
+}
+h2,p{
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+p{
+    font-weight: bold;
+}
+.resources{
+    font-size: 18px;
+}
+p:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
