@@ -158,10 +158,16 @@ async function fetchData(stateCode) {
     }
   });
 
-  let response = await fetch(
-    "https://api.covid19india.org/v4/min/timeseries.min.json"
-  );
-  let data = await response.json();
+  let response, data;
+
+  try {
+    response = await fetch(
+      "https://api.covid19india.org/v4/min/timeseries.min.json"
+    );
+    data = await response.json();
+  } catch (err) {
+    console.error("Couldn't fetch data from Covid19India API. Error: " + err);
+  }
 
   let stateData = data[stateCode];
 

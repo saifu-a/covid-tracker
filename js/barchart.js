@@ -42,8 +42,14 @@ let dataSet = [],
 
 let url = "https://api.covid19india.org/v4/min/data.min.json";
 async function fetchDataForChart() {
-  let response = await fetch(url);
-  let data = await response.json();
+  let response, data;
+
+  try {
+    response = await fetch(url);
+    data = await response.json();
+  } catch (err) {
+    console.error("Couldn't fetch data from Covid19India API. Error: " + err);
+  }
 
   stateList2.forEach((state) => {
     state.confirmed = data[state.code]["total"]["confirmed"];

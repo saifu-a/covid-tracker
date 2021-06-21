@@ -69,10 +69,16 @@ let recovered = [];
 let dates = [];
 
 async function fetchIndiaData() {
-  let response = await fetch(
-    "https://api.covid19api.com/total/dayone/country/india"
-  );
-  let data = await response.json();
+  let response, data;
+
+  try {
+    response = await fetch(
+      "https://api.covid19api.com/total/dayone/country/india"
+    );
+    data = await response.json();
+  } catch (err) {
+    console.error("Couldn't fetch data from Covid19 API. Error: " + err);
+  }
 
   const length = data.length - 1;
   const range = 20;
@@ -101,7 +107,8 @@ async function drawGraph() {
         {
           label: "Total Confirmed Cases",
           data: confirmed,
-          fill: false,
+          fill: true,
+          // fill: false,
           borderColor: "#FFD700",
           backgroundColor: "rgba(255,215,0, 0.5)",
           minBarLength: 100,
@@ -109,7 +116,8 @@ async function drawGraph() {
         {
           label: "Total Recovered",
           data: recovered,
-          fill: false,
+          fill: true,
+          // fill: false,
           borderColor: "#2E8B57",
           backgroundColor: "rgba(46,139,87, 0.5)",
           minBarLength: 100,
@@ -117,7 +125,8 @@ async function drawGraph() {
         {
           label: "Total Deaths",
           data: deaths,
-          fill: false,
+          fill: true,
+          // fill: false,
           borderColor: "#FF0000",
           backgroundColor: "rgba(255,0,0,0.5)",
           minBarLength: 100,
