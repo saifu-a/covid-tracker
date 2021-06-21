@@ -117,6 +117,7 @@ const new_vaccinated1_element = document.querySelector(
 );
 
 const ctx = document.getElementById("chart").getContext("2d");
+const ctxGrowth = document.getElementById("growth-chart").getContext("2d");
 
 // APP VARIABLES
 let app_data = [],
@@ -127,7 +128,8 @@ let app_data = [],
   vaccinated2_list = [],
   tested_list = [],
   dates_list = [],
-  formattedDates_list = [];
+  formattedDates_list = [],
+  growthRate = [];
 
 // GET USERS STATE CODE
 let stateCode = geoplugin_regionCode();
@@ -139,6 +141,17 @@ stateList.forEach((state) => {
 });
 
 async function fetchData(stateCode) {
+  (app_data = []),
+    (cases_list = []),
+    (recovered_list = []),
+    (deaths_list = []),
+    (vaccinated1_list = []),
+    (vaccinated2_list = []),
+    (tested_list = []),
+    (dates_list = []),
+    (formattedDates_list = []),
+    (growthRate = []);
+
   stateList.forEach((state) => {
     if (state.code == stateCode) {
       userState = state.name;
@@ -162,6 +175,9 @@ async function fetchData(stateCode) {
       stateData["dates"][date]["total"]["vaccinated1"] || 0
     );
   }
+
+  getGrowthRate(cases_list);
+
   updateUI();
 }
 
@@ -171,6 +187,7 @@ fetchData(stateCode);
 function updateUI() {
   updateStats();
   axesLinearChart();
+  axesLinearGrowthChart();
 }
 
 function updateStats() {
@@ -206,6 +223,19 @@ function updateStats() {
   new_vaccinated1_element.innerHTML = `+${new_vaccinated1_cases.toLocaleString(
     "en-IN"
   )}`;
+}
+
+// CALCULATE GROWTH RATE
+
+function getGrowthRate(list) {
+  growthRate = [];
+  for (let i = 1; i < list.length; i++) {
+    let dailyGrowth = (list[i] - list[i - 1]) / list[i - 1];
+
+    let percentGrowth = (dailyGrowth * 100).toFixed(4);
+
+    growthRate.push(percentGrowth);
+  }
 }
 
 // UPDATE CHART
@@ -278,6 +308,62 @@ function axesLinearChart() {
       legend: {
         display: true,
         labels: {
+          fontSize: 14,
+        },
+      },
+    },
+  });
+}
+
+// Growth Data Chart
+
+let my_growth_chart;
+function axesLinearGrowthChart() {
+  if (my_growth_chart) {
+    my_growth_chart.destroy();
+  }
+
+  let last100 = formattedDates_list.length - 101;
+
+  my_chart = new Chart(ctxGrowth, {
+    type: "line",
+    data: {
+      datasets: [
+        {
+          label: "Daily Growth Rate",
+          data: growthRate.slice(last100),
+          fill: true,
+          borderColor: "rgb(255, 0, 0)",
+          backgroundColor: "rgba(255, 0, 0, 0.5)",
+        },
+      ],
+      labels: formattedDates_list.slice(last100),
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              fontColor: "black",
+              fontSize: 14,
+            },
+          },
+        ],
+        xAxes: [
+          {
+            ticks: {
+              fontColor: "black",
+              fontSize: 14,
+            },
+          },
+        ],
+      },
+      legend: {
+        display: true,
+        labels: {
+          fontColor: "black",
           fontSize: 14,
         },
       },
