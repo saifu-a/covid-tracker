@@ -75,7 +75,7 @@
 .resources p {
   text-align: center;
   font-weight: bold;
-  background-color: #a9f1df;
+  /* background-color: #a9f1df; */
   width: fit-content;
   height: fit-content;
   margin-top: 2px;
