@@ -41,6 +41,9 @@ async function fetchData() {
 
       counterAnimation();
       newCounterAnimation();
+    })
+    .catch((err) => {
+      console.error("Couldn't fetch data from Covid19 API. Error: " + err);
     });
 }
 

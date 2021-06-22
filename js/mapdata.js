@@ -265,10 +265,14 @@ var simplemaps_countrymap_mapdata = {
 };
 
 async function fetchStateData() {
-  let response = await fetch(
-    "https://api.covid19india.org/v4/min/data.min.json"
-  );
-  let data = await response.json();
+  let response, data;
+
+  try {
+    response = await fetch("https://api.covid19india.org/v4/min/data.min.json");
+    data = await response.json();
+  } catch (err) {
+    console.error("Couldn't fetch data from Covid19India API. Error: " + err);
+  }
 
   displayStateData(data);
   simplemaps_countrymap.refresh();
