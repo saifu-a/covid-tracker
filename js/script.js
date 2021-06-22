@@ -14,7 +14,6 @@ let boxElements = document.querySelectorAll(".box");
 let boxHeaderElements = document.querySelectorAll(".box .header");
 let colorSwitch = document.querySelector("#input-color-switch");
 let helplineTable = document.getElementsByClassName("helpline-table-body");
-let resourcesElements = document.getElementsByClassName("resources");
 let testCentres = document.getElementsByClassName("testing-centres");
 
 colorSwitch.addEventListener("click", checkMode);
@@ -43,10 +42,6 @@ function darkModeOn() {
     helplinetable.setAttribute("style", "color: #04009A");
   }
 
-  for (let resources_Elements of resourcesElements) {
-    resources_Elements.setAttribute("style", "color: #BE0000");
-  }
-
   for (let test_Centres of testCentres) {
     test_Centres.setAttribute("style", "color: #171717");
   }
@@ -68,10 +63,6 @@ function darkModeOff() {
 
   for (let helplinetable of helplineTable) {
     helplinetable.setAttribute("style", "color: #171717");
-  }
-
-  for (let resources_Elements of resourcesElements) {
-    resources_Elements.setAttribute("style", "color: black");
   }
 
   for (let test_Centres of testCentres) {
