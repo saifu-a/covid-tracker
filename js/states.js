@@ -352,7 +352,6 @@ function axesLinearGrowthChart() {
         yAxes: [
           {
             ticks: {
-              fontColor: "black",
               fontSize: 14,
             },
           },
@@ -360,7 +359,6 @@ function axesLinearGrowthChart() {
         xAxes: [
           {
             ticks: {
-              fontColor: "black",
               fontSize: 14,
             },
           },
@@ -369,7 +367,6 @@ function axesLinearGrowthChart() {
       legend: {
         display: true,
         labels: {
-          fontColor: "black",
           fontSize: 14,
         },
       },
