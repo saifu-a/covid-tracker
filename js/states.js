@@ -331,7 +331,7 @@ function axesLinearGrowthChart() {
 
   let last100 = formattedDates_list.length - 101;
 
-  my_chart = new Chart(ctxGrowth, {
+  my_growth_chart = new Chart(ctxGrowth, {
     type: "line",
     data: {
       datasets: [
