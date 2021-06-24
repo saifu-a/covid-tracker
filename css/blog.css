@@ -51,7 +51,7 @@
 .prevention .content-container .content p {
   color: #0061a8;
   font-size: 1rem;
-  margin-top: -10px;
+  margin-top: 10px;
 }
 
 .prevention .content-container .content:hover {
