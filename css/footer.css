@@ -30,17 +30,28 @@
   font-size: 1.5rem;
 }
 
+.footer__nav {
+  margin: 3rem 5rem 0;
+  padding: 0;
+}
+
 .nav__ul {
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .nav__ul li {
   margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.nav__ul a:hover {
+  color: #2f2f2f;
 }
 
 .nav__ul a {
-  color: #999;
+  color: #777;
   text-decoration: none;
 }
 
@@ -48,14 +59,56 @@
   margin: 2rem 5rem;
 }
 
-.footer__nav {
-  margin: 2rem 14.3rem;
+.signup {
+  margin-top: 3rem;
+}
+
+.signup h2 {
+  margin-bottom: 1rem;
+}
+
+.signup input[type="email"] {
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  width: 12rem;
+  border: 1px solid #467eff;
+}
+
+.signup input[type="email"]:focus {
+  outline-offset: 2px;
+  outline-color: #467eff;
+}
+
+.signup input[type="submit"] {
+  margin-left: 1rem;
+  background-color: #467eff;
+  border-radius: 30px;
+  border: 1px solid #29668f;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+}
+
+.signup input[type="submit"]:hover {
+  background-color: #408c99;
+}
+
+.signup input[type="submit"]:active {
+  position: relative;
+  top: 1px;
 }
 
 .legal {
-  color: #999;
+  color: #777;
   margin: 0 5rem 2rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
+}
+
+.heart {
+  color: red;
 }
