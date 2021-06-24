@@ -79,6 +79,10 @@
   outline-color: #0066cc;
 }
 
+.signup input[type="email"]::placeholder {
+  opacity: 0.6;
+}
+
 .signup input[type="submit"] {
   margin-left: 1rem;
   background-color: #467eff;
