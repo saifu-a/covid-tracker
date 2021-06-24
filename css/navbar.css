@@ -1,3 +1,10 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
 /* Heading Section */
 
 .top-heading-container {
@@ -130,22 +137,22 @@
 }
 
 /* Sub-menu part of Helpline page */
-.navbar ul li{
+.navbar ul li {
   position: relative;
 }
 
-.navbar ul li ul{
+.navbar ul li ul {
   display: none;
   position: absolute;
-  background: #DEE4E7;
+  background: #dee4e7;
   padding: 10px;
 }
 
-.navbar ul li:hover ul{
+.navbar ul li:hover ul {
   display: block;
 }
 
-.navbar ul li ul li{
+.navbar ul li ul li {
   width: 200px;
   line-height: 1.7em;
 }
