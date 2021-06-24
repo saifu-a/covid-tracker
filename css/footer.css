@@ -76,7 +76,7 @@
 
 .signup input[type="email"]:focus {
   outline-offset: 2px;
-  outline-color: #467eff;
+  outline-color: #0066cc;
 }
 
 .signup input[type="submit"] {
@@ -93,7 +93,7 @@
 }
 
 .signup input[type="submit"]:hover {
-  background-color: #408c99;
+  background-color: #0066cc;
 }
 
 .signup input[type="submit"]:active {
