@@ -336,7 +336,7 @@ function axesLinearGrowthChart() {
     data: {
       datasets: [
         {
-          label: "Daily Growth Rate",
+          label: "Daily Growth Rate in %",
           data: growthRate.slice(last100),
           fill: true,
           borderColor: "rgb(255, 0, 0)",

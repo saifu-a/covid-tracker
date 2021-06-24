@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form Demo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+
+    <!-- Stylesheet to Reset Browser Defaults -->
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/animation.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <section class="navbar">
+      <header>
+        <img class="logo" src="images/logo.png" alt="logo" />
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li>
+            <a href="#">Helpline No.</a>
+            <ul>
+              <li><a href="contact_info.html">Contact Information</a></li>
+              <li><a href="testing_centres.html">Testing Centres</a></li>
+              <li><a href="resources.html">Resources</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" id="input-color-switch" />
+              <span class="slider round"></span>
+            </label>
+          </li>
+        </ul>
+      </header>
+    </section>
+
+    <main>
+      <h1 class="heading">Registration</h1>
+
+      <p class="banner">
+        Register with us a Volunteer or your Organization as a Resource
+      </p>
+
+      <div class="form-container">
+        <form class="register-form">
+          <input class="name" type="text" placeholder="Name" required />
+
+          <input
+            class="phone-no"
+            type="text"
+            placeholder="Phone No."
+            required
+          />
+
+          <input class="email" type="email" placeholder="Email" required />
+
+          <input class="website" type="text" placeholder="Website" />
+
+          <input class="location" type="text" placeholder="Location" required />
+
+          <button type="submit">Register</button>
+        </form>
+
+        <div class="contact-info">
+          <h2 class="info">Contact Us</h2>
+
+          <p class="info address">
+            <span class="labels">Address:</span> 198 West 21th Street, Suite 721
+            New York NY 10016
+          </p>
+
+          <p class="info"><span class="labels">Phone:</span> + 1235 2355 98</p>
+
+          <p class="info">
+            <span class="labels">Email:</span> info@yoursite.com
+          </p>
+
+          <p class="info"><span class="labels">Website:</span> yoursite.com</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">Covid-19 Tracker</h1>
+
+        <h2>Contact</h2>
+
+        <address>5534 Somewhere In. The World 22193-10212</address>
+      </div>
+
+      <div class="signup">
+        <h2>Newsletter</h2>
+        <form action="">
+          <input
+            class="signup__email"
+            type="email"
+            placeholder="Email address"
+            name="email"
+            required
+          />
+          <input class="signup__btn" type="submit" value="Subscribe" />
+        </form>
+      </div>
+
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Quick Links</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Home</a>
+            </li>
+
+            <li>
+              <a href="#">Blog</a>
+            </li>
+
+            <li>
+              <a href="#">Helpline</a>
+            </li>
+
+            <li>
+              <a href="#">Register</a>
+            </li>
+
+            <li>
+              <a href="#">About Us</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="legal">
+        <p>&copy; 2021 Covid-19 Tracker. All rights reserved.</p>
+
+        <div class="legal__links">
+          <span
+            >Made with <span class="heart">♥</span> remotely from Anywhere</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script src="js/footer.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

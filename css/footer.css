@@ -75,7 +75,7 @@
 }
 
 .signup input[type="email"]:focus {
-  outline-offset: 2px;
+  outline-width: 2px;
   outline-color: #0066cc;
 }
 
