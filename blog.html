@@ -2,69 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Covid-19 Tracker</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <title>complete responsive covid-19 website design tutorial</title>
+
+    <!-- font awesome cdn link  -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
-
-    <!-- Stylesheet to Reset Browser Defaults -->
-    <link rel="stylesheet" href="css/normalize.css" />
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/animation.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/helpline.css" />
+    <!-- custom css file link  -->
     <link rel="stylesheet" href="css/blog.css" />
   </head>
   <body>
-    <!-- Navbar section -->
-    <section class="navbar">
-      <header>
-        <img class="logo" src="images/logo.png" alt="logo" />
+    <!-- header section starts  -->
 
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li>
-            <a href="blog.html">Blog</a>
-          </li>
-          <li>
-            <a href="#">Helpline</a>
-            <ul class="helpline">
-              <li><a href="contact_info.html">Contact Information</a></li>
-              <li><a href="testing_centres.html">Testing Centres</a></li>
-              <li><a href="resources.html">Resources</a></li>
-            </ul>
-          </li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li>
-            <label class="switch">
-              <input type="checkbox" id="input-color-switch" />
-              <span class="slider round"></span>
-            </label>
-          </li>
-        </ul>
-      </header>
+    <header>
+      <a href="#" class="logo">c<span class="fas fa-virus"></span>vid-19</a>
+
+      <div id="menu" class="fas fa-bars"></div>
+
+      <nav class="navbar">
+        <a class="active" href="#home">home</a>
+        <a href="#prevent">prevent</a>
+        <a href="#symptoms">symptoms</a>
+        <a href="#precautions">precautions</a>
+        <a href="#doctor">doctor</a>
+        <a href="#hand-wash">hand-wash</a>
+      </nav>
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts  -->
+
+    <section class="home" id="home">
+      <div class="content">
+        <h1>Prevention from Corona Virus</h1>
+        <h3>stay home, stay safe</h3>
+        <a href="#" class="btn">how to prevent</a>
+      </div>
     </section>
 
-    <section class="prevention">
-      <div class="heading">
-        <h1>Prevention from Corona Virus</h1>
-        <h3>Stay Home, Stay Safe!</h3>
-      </div>
-      <div class="content-container">
-        <div class="content">
+    <!-- home section ends -->
+
+    <!-- prevent section starts  -->
+
+    <section class="prevent" id="prevent">
+      <h1 class="heading">how to prevent virus</h1>
+
+      <div class="box-container">
+        <div class="box">
           <img src="images/pre-1.png" alt="" />
-          <h3>Wash your place</h3>
+          <h3>wash your place</h3>
           <p>
             Use alcohol-based disinfectants to clean hard surfaces in your home
             like: countertops, door handles, furniture, toys. Also, clean your
@@ -74,9 +64,10 @@
             cleaning in between disinfecting surfaces.
           </p>
         </div>
-        <div class="content">
+
+        <div class="box">
           <img src="images/pre-2.png" alt="" />
-          <h3>Maintain Distance</h3>
+          <h3>maintain distance</h3>
           <p>
             Physical(social) distancing, also means staying home and working
             remotely when possible. If you must go out for necessities, keep a
@@ -84,9 +75,10 @@
             virus by speaking to someone in close contact to you.
           </p>
         </div>
-        <div class="content">
+
+        <div class="box">
           <img src="images/pre-3.png" alt="" />
-          <h3>Don't touch face</h3>
+          <h3>don't touch face</h3>
           <p>
             Covid-19 virus can live on some surfaces for up to 72 hours. You can
             get the virus on your hands if you touch a surface like: gas pump
@@ -96,18 +88,20 @@
             your hands into your body.
           </p>
         </div>
-        <div class="content">
+
+        <div class="box">
           <img src="images/pre-4.png" alt="" />
-          <h3>Wash your hands</h3>
+          <h3>wash your hand</h3>
           <p>
             Use warm water and soap and rub your hands for at least 20 seconds.
             Work the lather to your wrists, between your fingers, and under your
             fingernails. You can also use an antibacterial and antiviral soap.
           </p>
         </div>
-        <div class="content">
+
+        <div class="box">
           <img src="images/pre-5.png" alt="" />
-          <h3>Use napkin</h3>
+          <h3>use napkin</h3>
           <p>
             Covid-19 virus is found in high amounts in the nose and mouth. This
             means it can be carried by air droplets to other people when you
@@ -116,9 +110,10 @@
             keep your hands as clean as possible.
           </p>
         </div>
-        <div class="content">
+
+        <div class="box">
           <img src="images/pre-6.png" alt="" />
-          <h3>Wear a mask</h3>
+          <h3>wear a mask</h3>
           <p>
             Everyone must wear a face mask in public places where physical
             distancing may be difficult, such as grocery stores. When used
@@ -131,50 +126,67 @@
       </div>
     </section>
 
-    <section class="symptoms">
-      <h1 class="heading">Covid-19 Symptoms</h1>
+    <!-- prevent section ends -->
+
+    <!-- symptoms section starts  -->
+
+    <section class="symptoms" id="symptoms">
+      <h1 class="heading">covid-19 symptoms</h1>
+
       <div class="column">
         <div class="main-image">
           <img src="images/main-symp-img.png" alt="" />
         </div>
-        <div class="content-container">
-          <div class="content">
+
+        <div class="box-container">
+          <div class="box">
             <img src="images/symp-a.png" alt="" />
-            <h3>Dry cough</h3>
+            <h3>dry cough</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/symp-b.png" alt="" />
-            <h3>Sore throat</h3>
+            <h3>sore throat</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/symp-c.png" alt="" />
-            <h3>Cold</h3>
+            <h3>cold</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/symp-d.png" alt="" />
-            <h3>Fever</h3>
+            <h3>fever</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/symp-e.png" alt="" />
-            <h3>Headache</h3>
+            <h3>headache</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/symp-f.png" alt="" />
-            <h3>Vomitting</h3>
+            <h3>vomiting</h3>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="precautions">
-      <h1 class="heading">Take precautions against Covid-19</h1>
+    <!-- symptoms section ends -->
+
+    <!-- precautions section starts  -->
+
+    <section class="precautions" id="precautions">
+      <h1 class="heading">take precautions against covid-19</h1>
+
       <div class="column">
-        <div class="content-container">
-          <h3 class="title">Things you should DO</h3>
-          <div class="content" id="content-do">
+        <div class="box-container">
+          <h3 class="title">things you should DO</h3>
+
+          <div class="box">
             <img src="images/do-img1.png" alt="" />
             <div class="info">
-              <h3>Wash your hands</h3>
+              <h3>wash your hand</h3>
               <p>
                 Use hand sanitizer when you cannot wash your hands properly.
                 Rewash your hands several times a day, especially after touching
@@ -182,10 +194,11 @@
               </p>
             </div>
           </div>
-          <div class="content" id="content-do">
+
+          <div class="box">
             <img src="images/do-img2.png" alt="" />
             <div class="info">
-              <h3>Always wear a mask</h3>
+              <h3>always wear a mask</h3>
               <p>
                 Everyone, 2 years and older should wear masks in public. Wear
                 your mask over your nose and mouth and secure it under your
@@ -195,10 +208,11 @@
               </p>
             </div>
           </div>
-          <div class="content" id="content-do">
+
+          <div class="box">
             <img src="images/do-img3.png" alt="" />
             <div class="info">
-              <h3>Stay home during fever</h3>
+              <h3>stay home during fever</h3>
               <p>
                 Call your doctor if you have fever or any symptoms. Stay home
                 until you recover. Avoid sitting, sleeping, or eating with your
@@ -208,12 +222,13 @@
           </div>
         </div>
 
-        <div class="content-container">
-          <h3 class="title">Things you should NOT DO</h3>
-          <div class="content" id="content-dont">
+        <div class="box-container">
+          <h3 class="title">things you should NOT DO</h3>
+
+          <div class="box">
             <img src="images/dont-img1.png" alt="" />
             <div class="info">
-              <h3>Avoid close contact with animals</h3>
+              <h3>avoid close contact with animals</h3>
               <p>
                 A small number of pets worldwide, including cats and dogs, have
                 been reported to be infected with the virus that causes
@@ -222,10 +237,11 @@
               </p>
             </div>
           </div>
-          <div class="content" id="content-dont">
+
+          <div class="box">
             <img src="images/dont-img2.png" alt="" />
             <div class="info">
-              <h3>Avoid close contact with people</h3>
+              <h3>avoid close contact with peoples</h3>
               <p>
                 Avoid close contact with people. If possible, maintain 6 feet
                 between distance from others. Remember that some people without
@@ -233,10 +249,11 @@
               </p>
             </div>
           </div>
-          <div class="content" id="content-dont">
+
+          <div class="box">
             <img src="images/dont-img3.png" alt="" />
             <div class="info">
-              <h3>Avoid crowded area</h3>
+              <h3>avoid crowded area</h3>
               <p>
                 Being in a group or gathering makes it more likely that you’ll
                 be in close contact with someone. This includes avoiding all
@@ -250,41 +267,162 @@
       </div>
     </section>
 
-    <section class="hand-wash">
-      <h1 class="heading">How to wash hands properly</h1>
+    <!-- precautions section ends -->
+
+    <!-- doctor section start  -->
+
+    <section class="doctor" id="doctor">
+      <h1 class="heading">consult to our doctors</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="images/doc1.png" alt="" />
+          <h3>john doe</h3>
+          <span>senior expert</span>
+          <div class="share">
+            <a href="#" class="fab fa-whatsapp"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="images/doc2.png" alt="" />
+          <h3>john doe</h3>
+          <span>senior expert</span>
+          <div class="share">
+            <a href="#" class="fab fa-whatsapp"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="images/doc3.png" alt="" />
+          <h3>john doe</h3>
+          <span>senior expert</span>
+          <div class="share">
+            <a href="#" class="fab fa-whatsapp"></a>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- doctor section ends -->
+
+    <!-- hand-wash section starts  -->
+
+    <section class="hand-wash" id="hand-wash">
+      <h1 class="heading">how to wash hand properly</h1>
+
       <div class="column">
-        <div class="content-container">
-          <div class="content">
+        <div class="box-container">
+          <div class="box">
             <img src="images/wash-a.png" alt="" />
-            <h3>Water and Soap</h3>
+            <h3>water and soap</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/wash-b.png" alt="" />
-            <h3>Palm to Palm</h3>
+            <h3>palm to palm</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/wash-c.png" alt="" />
-            <h3>Between fingers</h3>
+            <h3>Between Fingurs</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/wash-d.png" alt="" />
             <h3>Focus on Thumbs</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/wash-e.png" alt="" />
-            <h3>Back of hands</h3>
+            <h3>Back of Hands</h3>
           </div>
-          <div class="content">
+
+          <div class="box">
             <img src="images/wash-f.png" alt="" />
             <h3>Focus on wrist</h3>
           </div>
         </div>
+
         <div class="main-image">
           <img src="images/main-wash-img.png" alt="" />
         </div>
       </div>
     </section>
 
-    <script src="js/navbar.js"></script>
+    <!-- hand-wash section ends -->
+
+    <!-- footer section starts  -->
+
+    <div class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>about us</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
+            minima soluta distinctio eaque magni veritatis dicta dolore
+            dignissimos totam quis!
+          </p>
+        </div>
+
+        <div class="box">
+          <h3>locations</h3>
+          <a href="#">india</a>
+          <a href="#">USA</a>
+          <a href="#">france</a>
+          <a href="#">russia</a>
+          <a href="#">japan</a>
+        </div>
+
+        <div class="box">
+          <h3>quick links</h3>
+          <a href="#">home</a>
+          <a href="#">prevent</a>
+          <a href="#">symptoms</a>
+          <a href="#">precautions</a>
+          <a href="#">doctor</a>
+          <a href="#">hand-wash</a>
+        </div>
+
+        <div class="box">
+          <h3>follow us</h3>
+          <a href="#">facebook</a>
+          <a href="#">twitter</a>
+          <a href="#">instagram</a>
+          <a href="#">linkedin</a>
+          <a href="#">youtube</a>
+        </div>
+      </div>
+
+      <h1 class="credit">
+        created by <a href="#">mr. web designer</a> &copy; copyright @ 2021
+      </h1>
+    </div>
+
+    <!-- footer section ends -->
+
+    <!-- scroll top  -->
+
+    <a href="#home" class="scroll-top">
+      <img src="images/scroll-img.png" alt="" />
+    </a>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/blog.js"></script>
   </body>
 </html>
