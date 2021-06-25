@@ -83,8 +83,13 @@
   font-size: 1.7rem;
 }
 
+.info-heading {
+  margin: 3rem;
+}
+
 .info {
   margin: 3rem;
+  margin-top: 0;
   font-size: 1rem;
   line-height: 1.8;
 }
