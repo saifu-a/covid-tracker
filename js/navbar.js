@@ -5,6 +5,7 @@ let boxHeaderElements = document.querySelectorAll(".box .header");
 let colorSwitch = document.querySelector("#input-color-switch");
 let helplineTable = document.getElementsByClassName("helpline-table-body");
 let testCentres = document.getElementsByClassName("testing-centres");
+let svgElements = document.querySelectorAll(".svg");
 
 colorSwitch.addEventListener("click", checkMode);
 
@@ -36,6 +37,10 @@ function darkModeOn() {
     test_Centres.setAttribute("style", "color: #171717");
   }
 
+  for (let svgElement of svgElements) {
+    svgElement.style.fill = "#ddd";
+  }
+
   document.body.classList.add("dark-mode");
 }
 
@@ -57,6 +62,10 @@ function darkModeOff() {
 
   for (let test_Centres of testCentres) {
     test_Centres.setAttribute("style", "color: #171717");
+  }
+
+  for (let svgElement of svgElements) {
+    svgElement.style.fill = "#222";
   }
 
   document.body.classList.remove("dark-mode");
