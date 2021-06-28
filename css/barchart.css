@@ -9,3 +9,13 @@
   margin-bottom: 5%;
   width: 45%;
 }
+
+@media (max-width: 768px) {
+  .chart__wrapper {
+    width: 90%;
+  }
+
+  .bar-chart {
+    min-height: 15rem;
+  }
+}

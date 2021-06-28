@@ -11,10 +11,8 @@
   display: flex;
   justify-content: space-between;
   height: 200px;
-  /* padding-top: 100px; */
   padding-left: 20px;
   padding-right: 30px;
-  /* color: black; */
 }
 
 .flex-container {
@@ -180,4 +178,15 @@
 .change-state {
   align-content: flex-start;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .latest-reports {
+    flex-direction: column;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
 }
