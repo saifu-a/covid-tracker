@@ -155,7 +155,7 @@ html {
 .navbar ul li ul {
   display: none;
   position: absolute;
-  background: #dee4e7;
+  background: #fff;
   padding: 10px;
 }
 

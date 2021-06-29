@@ -4,6 +4,10 @@
   font-family: "Lato", sans-serif;
 }
 
+.helpline_num h2{
+  padding: 25px;
+}
+
 .helpline_num {
   margin-left: auto;
   margin-right: auto;
@@ -117,6 +121,7 @@
   font-size: 30px;
   font-weight: bolder;
   color: #61b15a;
+  padding: 25px;
 }
 
 .testing-centres{
