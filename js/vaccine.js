@@ -15,7 +15,7 @@ async function fetchVaccineData() {
   }
 
   const length = data["tested"].length;
-  const vaccineData = data["tested"][length - 2];
+  const vaccineData = data["tested"][length - 1];
   // console.log(vaccineData);
 
   let i = 0;

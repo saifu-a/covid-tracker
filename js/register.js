@@ -1,5 +1,3 @@
-
-
 // Reference User Info Collections
 let userInfo = firebase.database().ref("registration");
 
