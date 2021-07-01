@@ -11,12 +11,20 @@ let vaccineCardElements = document.querySelectorAll(".vaccine-card");
 
 colorSwitch.addEventListener("click", checkMode);
 
+if (localStorage.getItem("darkMode") === "on") {
+  colorSwitch.checked = true;
+  darkModeOn();
+}
+
 function checkMode() {
   if (colorSwitch.checked) {
+    localStorage.setItem("darkMode", "on");
     darkModeOn();
   } else {
+    localStorage.setItem("darkMode", "off");
     darkModeOff();
   }
+  console.log(localStorage.getItem("darkMode"));
 }
 
 function darkModeOn() {
