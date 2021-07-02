@@ -18,6 +18,4 @@ function displayChildData(childData) {
         <a href=https://${childData.website} target="_blank" >https://${childData.website}</a>
     </p>
     `;
-
-  console.log(childData);
 }

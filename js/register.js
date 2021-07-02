@@ -13,8 +13,6 @@ function submitForm(evt) {
   let website = document.querySelector(".website").value;
   let location = document.querySelector(".location").value;
 
-  console.log(name, phoneNo, email, website, location);
-
   saveContactInfo(name, phoneNo, email, website, location);
 
   document.querySelector(".register-form").reset();
@@ -24,11 +22,26 @@ function submitForm(evt) {
 function saveContactInfo(name, phoneNo, email, website, location) {
   let newUserInfo = userInfo.push();
 
-  newUserInfo.set({
-    name: name,
-    phoneNo: phoneNo,
-    email: email,
-    website: website,
-    location: location,
-  });
+  newUserInfo
+    .set({
+      name: name,
+      phoneNo: phoneNo,
+      email: email,
+      website: website,
+      location: location,
+    })
+    .then(() => {
+      swal({
+        icon: "success",
+        title: "Good job!",
+        text: "You have been successfully registered!",
+      });
+    })
+    .catch((err) => {
+      swal({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    });
 }
