@@ -132,7 +132,15 @@ let app_data = [],
   growthRate = [];
 
 // GET USERS STATE CODE
-let stateCode = geoplugin_regionCode();
+let stateCode;
+
+try {
+  stateCode = geoplugin_regionCode();
+} catch (err) {
+  console.log("geoPlugin failed.");
+  stateCode = "WB";
+}
+
 let userState;
 stateList.forEach((state) => {
   if (state.code == stateCode) {
