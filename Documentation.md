@@ -25,7 +25,7 @@ One other factor that makes our project different is that Volunteers and Organiz
 
 ### Scope of the Work
 
-
+As with Covid-19 data, this project can be used to visualize any kind of data in a much simpler and beautiful way. It can be applied to visualize Financial data, Scientific data, etc.
 
 ## Background/Review of Related Work
 
