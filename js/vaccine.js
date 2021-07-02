@@ -1,3 +1,9 @@
+// Redirect to CoWIN Site on click
+
+document.querySelector(".vaccine-button").onclick = () => {
+  location.href = "https://selfregistration.cowin.gov.in/";
+};
+
 // Select all Vaccine Content Elements
 
 const vaccineContents = document.querySelectorAll(".vaccine-content");
@@ -16,7 +22,6 @@ async function fetchVaccineData() {
 
   const length = data["tested"].length;
   const vaccineData = data["tested"][length - 1];
-  // console.log(vaccineData);
 
   let i = 0;
   for (let keys in vaccineData) {
@@ -27,7 +32,6 @@ async function fetchVaccineData() {
 
     if (i === 10) break;
   }
-  // console.log(vaccineContents);
 }
 
 fetchVaccineData();
