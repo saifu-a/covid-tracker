@@ -1,4 +1,6 @@
-# Title Page
+# Covid-19 Tracker
+
+## Title Page
 
 ## Certificate from the Supervisor
 
@@ -9,7 +11,6 @@
 ## Abstract
 
 ## Introduction (Domain Description, Motivation and Scope of the Work)
-
 
 ### Domain Description
 
@@ -31,6 +32,41 @@ One other factor that makes our project different is that Volunteers and Organiz
 ## Methodology (Problem Formulation, Algorithm Description, and other Design descriptions)
 
 ## Implementation
+
+### Techonologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Firebase
+
+#### HTML
+
+The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.
+
+Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+
+#### CSS
+
+Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.
+
+#### JavaScript
+
+JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+
+#### Firebase
+
+Firebase (a NoSQLjSON database) is a real-time database that allows storing a list of objects in the form of a tree. We can synchronize data between different devices. Firebase manages real-time data in the database. So, it easily and quickly exchanges the data to and from the database. Hence, for developing mobile apps such as live streaming, chat messaging, etc., we can use Firebase.
+
+### Additional Libraries Used
+
+- Google Fonts
+- Animate on Scroll
+- Normalize.css
+- geoPlugin
+- Moment.js
+- Chart.js
+- SweetAlert.js
 
 ## Results and Discussion
 
