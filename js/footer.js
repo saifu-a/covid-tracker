@@ -23,9 +23,24 @@ signUpForm.addEventListener("submit", (evt) => {
 
   let newSignupInfo = signupInfo.push();
 
-  newSignupInfo.set({
-    email: signUpEmail.value,
-  });
+  newSignupInfo
+    .set({
+      email: signUpEmail.value,
+    })
+    .then(() => {
+      swal({
+        icon: "success",
+        title: "Good job!",
+        text: "You have successfully subscribed!",
+      });
+    })
+    .catch(() => {
+      swal({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!",
+      });
+    });
 
   document.querySelector(".signup form").reset();
 });

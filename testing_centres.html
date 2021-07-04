@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/helpline.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
     <!-- Navbar section -->
@@ -648,6 +649,79 @@
         </tbody>
       </table>
     </section>
+
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">Covid-19 Tracker</h1>
+
+        <h2>Contact</h2>
+
+        <address>5534 Somewhere In. The World 22193-10212</address>
+      </div>
+
+      <div class="signup" action="submit">
+        <h2>Newsletter</h2>
+        <form>
+          <input
+            class="signup__email"
+            type="email"
+            placeholder="Email address"
+            name="email"
+            required
+          />
+          <input class="signup__btn" type="submit" value="Subscribe" />
+        </form>
+      </div>
+
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Quick Links</h2>
+
+          <ul class="nav__ul">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+
+            <li>
+              <a href="contact_info.html">Helpline</a>
+            </li>
+
+            <li>
+              <a href="register.html">Register</a>
+            </li>
+
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="legal">
+        <p>&copy; 2021 Covid-19 Tracker. All rights reserved.</p>
+
+        <div class="legal__links">
+          <span
+            >Made with <span class="heart">♥</span> remotely from Kolkata</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
   </body>
 </html>

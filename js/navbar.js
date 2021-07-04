@@ -8,6 +8,7 @@ let testCentres = document.getElementsByClassName("testing-centres");
 let svgElements = document.querySelectorAll(".svg");
 let navbarHeaderElement = document.querySelector(".navbar header");
 let vaccineCardElements = document.querySelectorAll(".vaccine-card");
+let footerElement = document.querySelector(".footer");
 
 colorSwitch.addEventListener("click", checkMode);
 
@@ -24,7 +25,6 @@ function checkMode() {
     localStorage.setItem("darkMode", "off");
     darkModeOff();
   }
-  console.log(localStorage.getItem("darkMode"));
 }
 
 function darkModeOn() {
@@ -57,6 +57,9 @@ function darkModeOn() {
     vaccineCardElement.style.backgroundImage =
       "linear-gradient(315deg, rgb(42, 70, 82) 0%, rgb(44, 48, 50) 74%)";
   }
+
+  footerElement.style.backgroundColor = "rgb(30, 33, 34)";
+  footerElement.style.color = "rgb(202, 198, 191)";
 
   navbarHeaderElement.style.boxShadow = "none";
 
@@ -93,6 +96,9 @@ function darkModeOff() {
     vaccineCardElement.style.backgroundImage =
       "linear-gradient(315deg, #aecad6 0%, #b8d3fe 74%)";
   }
+
+  footerElement.style.backgroundColor = "rgb(244, 244, 244)";
+  footerElement.style.color = "#2f2f2f";
 
   navbarHeaderElement.style.boxShadow = "0 0 20px lightgray";
 
