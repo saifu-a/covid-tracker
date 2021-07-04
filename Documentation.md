@@ -6,6 +6,8 @@
 
 ## Acknowledgement
 
+We are very much thankful to our past selves for enduring the hurdles in learning to code in HTML, CSS, JavaScript with patience, persistence and perseverence. Thank you for never giving up. Although there might be many bugs left, We can cut you off some slack and do the rest.
+
 ## Table of Contents
 
 ## Abstract
