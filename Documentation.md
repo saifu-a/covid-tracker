@@ -6,7 +6,9 @@
 
 ## Acknowledgement
 
-We are very much thankful to our past selves for enduring the hurdles in learning to code in HTML, CSS, JavaScript with patience, persistence and perseverence. Thank you for never giving up. Although there might be many bugs left, We can cut you off some slack and do the rest.
+We would like to thank our Project Guide NS Ma'am for her whole-hearted support in making this project. her insights gave us new perspectives and ideas to make our project faster, robust and beautiful.
+
+We are very much thankful to our past selves for enduring the hurdles in learning to code in HTML, CSS, JavaScript with patience, persistence and perseverence. Thank you for never giving up. Although there might be many bugs left, we can cut you off some slack and do the rest.
 
 ## Table of Contents
 
@@ -33,7 +35,24 @@ As with Covid-19 data, this project can be used to visualize any kind of data in
 
 ## Methodology (Problem Formulation, Algorithm Description, and other Design descriptions)
 
-## Implementation
+### Problem Formulation
+
+The problem that is being faced by all of us during this pandemic is the lack of available resources such as availability of beds in hospitals, location of Covid hospitals, accurate statistics and contact details of Volunteer Organizations and Individuals. We are set out to bridge the gap between those who needs these resources and those who can provide.
+
+By using our platform, Users can get daily accurate statistics of confirmed cases, deaths and recovered cases on a state-level as well as can seek help thanks to volunteer organizations and individuals across India. Volunteer Organizations and Individuals can register themselves through our platform so that other users in need can seek their help.
+
+### Algorithm Description
+
+The following formula has been used to generate Daily Growth Rate graph
+
+$$PR = {(V_{present} - V_{past}) \over V_{past}} * 100 $$
+
+$$PR = \text{Percent Rate}$$
+
+$$V_{present} = \text{Present Value} $$
+$$V_{past} = \text{Past Value} $$
+
+### Design
 
 ### Techonologies Used
 
@@ -69,6 +88,12 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
 - Moment.js
 - Chart.js
 - SweetAlert.js
+
+## Implementation
+
+### DFD
+
+![DFD](/images/DFD.png "DFD")
 
 ## Results and Discussion
 
