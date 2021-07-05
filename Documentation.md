@@ -43,9 +43,11 @@ By using our platform, Users can get daily accurate statistics of confirmed case
 
 ### Algorithm Description
 
+#### Algorithm used in Card Component
+
 The cards component:
 
-```bash
+```js
 async function fetchData() {
   await fetch("https://api.covid19api.com/summary")
     .then((response) => {
@@ -59,6 +61,7 @@ async function fetchData() {
     });
 }
 ```
+
 - The fetchData() is an asynchronous function that fetches data from the API and displays it into the website.
 
 - The await fetch("https://api.covid19api.com/summary") starts a request to "https://api.covid19api.com/summary" and returns a promise.
@@ -74,6 +77,8 @@ async function fetchData() {
 - .then(data) is called when the promise is resolved.
 
 - .catch(err) is called when the promise is rejected in case a request cannot be made or a response cannot be retrieved.
+
+#### Algorithm used in drawing the Growth Rate Chart
 
 The following formula has been used to generate Daily Growth Rate graph
 
