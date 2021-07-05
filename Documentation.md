@@ -82,12 +82,13 @@ async function fetchData() {
 
 The following formula has been used to generate Daily Growth Rate graph
 
-$$PR = {(V_{present} - V_{past}) \over V_{past}} * 100 $$
+$$PR = {(V_{present} - V_{past}) \over V_{past}} * 100$$
 
 $$PR = \text{Percent Rate}$$
 
-$$V_{present} = \text{Present Value} $$
-$$V_{past} = \text{Past Value} $$
+$$V_{present} = \text{Present Value}$$
+
+$$V_{past} = \text{Past Value}$$
 
 ### Design
 
