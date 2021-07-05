@@ -27,7 +27,6 @@
 }
 .helpline_num tbody tr {
   font-size: 15px;
-  font-weight: bold;
 }
 
 .helpline_num thead tr {
@@ -80,6 +79,7 @@
   text-align: center;
   font-size: 30px;
   font-weight: bolder;
+  padding-top: 25px;
   /* color: #39a2db; */
 }
 
@@ -140,7 +140,6 @@
 
 .testing-centres tbody tr {
   font-size: 15px;
-  font-weight: bold;
 }
 
 .testing-centres thead tr {
