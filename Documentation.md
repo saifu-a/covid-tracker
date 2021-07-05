@@ -47,6 +47,8 @@ By using our platform, Users can get daily accurate statistics of confirmed case
 
 The cards component:
 
+![Cards](/images/Cards.png "Cards")
+
 ```js
 async function fetchData() {
   await fetch("https://api.covid19api.com/summary")
