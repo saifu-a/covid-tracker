@@ -43,41 +43,6 @@ By using our platform, Users can get daily accurate statistics of confirmed case
 
 ### Algorithm Description
 
-#### Algorithm used in Card Component
-
-The cards component:
-
-```js
-async function fetchData() {
-  await fetch("https://api.covid19api.com/summary")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      "Displays the data fetched from the API in the website if the promise is resolved"
-    })
-    .catch((err) => {
-      "Displays error if the promise is rejected"
-    });
-}
-```
-
-- The fetchData() is an asynchronous function that fetches data from the API and displays it into the website.
-
-- The await fetch("https://api.covid19api.com/summary") starts a request to "https://api.covid19api.com/summary" and returns a promise.
-
-- A promise has two states: either it will be fulfilled(i.e. resolved) or it will be failed(i.e. rejected).
-
-- The await keyword is present, so the asynchronous function is paused until the request completes.
-
-- When the request completes, response is assigned with the response object of the request.
-
-- response.json() is a method on the response object that let's us extract a JSON(JavaScript Object Notation) object from the response.
-
-- .then(data) is called when the promise is resolved.
-
-- .catch(err) is called when the promise is rejected in case a request cannot be made or a response cannot be retrieved.
-
 #### Algorithm used in drawing the Growth Rate Chart
 
 The following formula has been used to generate Daily Growth Rate graph
@@ -132,6 +97,43 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
 ### DFD
 
 ![DFD](/images/DFD.png "DFD")
+
+#### Algorithm used in Card Component
+
+The cards component:
+
+![Cards](/images/Cards.png "Cards")
+
+```js
+async function fetchData() {
+  await fetch("https://api.covid19api.com/summary")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      "Displays the data fetched from the API in the website if the promise is resolved"
+    })
+    .catch((err) => {
+      "Displays error if the promise is rejected"
+    });
+}
+```
+
+- The fetchData() is an asynchronous function that fetches data from the API and displays it into the website.
+
+- The await fetch("https://api.covid19api.com/summary") starts a request to "https://api.covid19api.com/summary" and returns a promise.
+
+- A promise has two states: either it will be fulfilled(i.e. resolved) or it will be failed(i.e. rejected).
+
+- The await keyword is present, so the asynchronous function is paused until the request completes.
+
+- When the request completes, response is assigned with the response object of the request.
+
+- response.json() is a method on the response object that let's us extract a JSON(JavaScript Object Notation) object from the response.
+
+- .then(data) is called when the promise is resolved.
+
+- .catch(err) is called when the promise is rejected in case a request cannot be made or a response cannot be retrieved.
 
 ## Results and Discussion
 
