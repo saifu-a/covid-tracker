@@ -117,3 +117,11 @@
 .heart {
   color: red;
 }
+
+@media (max-width: 768px) {
+  .signup {
+    display: block;
+    text-align: center;
+    margin: 3rem auto;
+  }
+}

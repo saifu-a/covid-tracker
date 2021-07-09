@@ -181,12 +181,21 @@
 }
 
 @media (max-width: 768px) {
-
   .latest-reports {
     flex-direction: column;
   }
 
   .flex-container {
     flex-direction: column;
+    padding: 300px 0px 0px 70px;
+  }
+
+  .state-chart {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #chart {
+    margin: 30rem 0;
   }
 }

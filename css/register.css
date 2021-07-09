@@ -91,3 +91,24 @@
   font-size: 1.1rem;
   font-weight: 700;
 }
+
+@media (max-width: 768px) {
+  .form-container {
+    flex-direction: column;
+  }
+
+  .register-form {
+    width: 100%;
+    margin: 0 -4rem;
+  }
+
+  .contact-info {
+    width: 20rem;
+    margin: 2% auto;
+  }
+
+  .register-form button {
+    display: block;
+    margin: 1rem 12rem;
+  }
+}
