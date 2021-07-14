@@ -125,7 +125,7 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
 
 ![DFD](./images/DFD.png "DFD")
 
-### Algorithm used in Card Component
+### Implementation of the Card Component
 
 The cards component:
 
@@ -161,6 +161,29 @@ async function fetchData() {
 - .then(data) is called when the promise is resolved.
 
 - .catch(err) is called when the promise is rejected in case a request cannot be made or a response cannot be retrieved.
+
+### Implementation of the Line Chart
+
+![Chart](./images/chart.png "Chart")
+
+The line chart is used to show the comparison among the data sets(i.e The Total Confirmed Cases, Total Recovered and Total Deaths) across the country over the past months.
+
+- Dataset Properties
+  
+  data.datasets [index] - The line chart allows a number of properties to be specified for each dataset. These are used to set display properties for a specific dataset. 
+  
+  - backgroundColor - The line fill color.
+  - borderColor -	The line color.
+  - fill - Fills the area under the line.
+  - label - To give names to the lines used for      comparison.
+  - data - Used to pass data in the form of array.
+
+  data.labels - Used to label the index axis(i.e. by default the x-axis.)
+
+  data.options - Provides options for the whole chart.
+  
+  - responsive - Resizes the chart according to the window size.
+  - maintainAspectRatio - Determines whether to maintain the original canvas aspect ratio(width/height) when resizing.
 
 ## Results and Discussion
 
