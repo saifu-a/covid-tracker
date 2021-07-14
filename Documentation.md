@@ -55,7 +55,7 @@ By using our platform, Users can get daily accurate statistics of confirmed case
 
 The following formula has been used to generate Daily Growth Rate graph
 
-$$PR = {(V_{present} - V_{past}) \over V_{past}} * 100$$
+$$PR = {\frac {(V_{present} - V_{past})} {V_{past}} * 100}$$
 
 $$PR = \text{Percent Rate}$$
 
@@ -123,13 +123,13 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
 
 ### DFD
 
-![DFD](/images/DFD.png "DFD")
+![DFD](./images/DFD.png "DFD")
 
-#### Algorithm used in Card Component
+### Algorithm used in Card Component
 
 The cards component:
 
-![Cards](/images/Cards.png "Cards")
+![Cards](./images/Cards.png "Cards")
 
 ```js
 async function fetchData() {
