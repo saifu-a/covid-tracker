@@ -8,7 +8,7 @@
 
 We would like to thank our Project Guide NS Ma'am for her whole-hearted support in making this project. her insights gave us new perspectives and ideas to make our project faster, robust and beautiful.
 
-We are very much thankful to our past selves for enduring the hurdles in learning to code in HTML, CSS, JavaScript with patience, persistence and perseverence. Thank you for never giving up. Although there might be many bugs left, we can cut you off some slack and do the rest.
+We are very much thankful to our past selves for enduring the hurdles in learning to code in HTML, CSS, JavaScript with patience, persistence and perseverance. Thank you for never giving up. Although there might be many bugs left, we can cut you off some slack and do the rest.
 
 ## Table of Contents
 
@@ -32,6 +32,14 @@ One other factor that makes our project different is that Volunteers and Organiz
 As with Covid-19 data, this project can be used to visualize any kind of data in a much simpler and beautiful way. It can be applied to visualize Financial data, Scientific data, etc.
 
 ## Background/Review of Related Work
+
+### Websites
+
+#### The following websites were the one from where we took our inspiration
+
+1. covid19india.org
+
+  This is a website built using React.js and has their own REST API.
 
 ## Methodology (Problem Formulation, Algorithm Description, and other Design descriptions)
 
@@ -57,7 +65,7 @@ $$V_{past} = \text{Past Value}$$
 
 ### Design
 
-### Techonologies Used
+### Technologies Used
 
 - HTML
 - CSS
@@ -85,12 +93,31 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
 ### Additional Libraries Used
 
 - Google Fonts
+
+  This is a library of Free and Open Source Fonts available to use in any project. This is helpful because most of the time the browser gives some fonts which can be different in other browsers or platforms. Google Fonts enables us to use a consistent typography across all browsers and platforms.
+
 - Animate on Scroll
+
+  This is a library containing beautiful scroll animations. This gives the webpage a nice look and feel when you scroll through it. It is implemented just by importing the library in the HTML file and adding the animation name as an attribute to any HTML element.
+
 - Normalize.css
+
+  This is a CSS Reset File. To explain in simpler terms, every browser has some defaults styles to each and every HTML element and it differs from browser to browser. So, to have a consistent default styles across all browsers *Normalize.css* is used. It makes the webpage look same across all browsers and platforms.
+
 - geoPlugin
 - Moment.js
 - Chart.js
 - SweetAlert.js
+
+### Data Sources
+
+- [Ministry of Health and Family Welfare, Government of India](https://www.mohfw.gov.in/)
+
+- [MyGov.in](https://www.mygov.in/covid-19/)
+
+- [Covid19India.org](https://covid19india.org/)
+
+- [IndiaCovid-19.in](https://indiacovid-19.in/)
 
 ## Implementation
 
