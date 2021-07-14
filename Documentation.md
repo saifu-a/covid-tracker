@@ -189,4 +189,10 @@ The line chart is used to show the comparison among the data sets(i.e The Total 
 
 ## Conclusion
 
+This project aims to display the accurate real-time statistics of COVID-19 pandemic and spread awareness among people. There are several other websites that serves the similar purpose as this project but the unique factor of our website is that any Organisation or any individual can add useful resources in our website by registering with us. 
+
+In future, we may extend our website to include features such as:
+
+- Newsletter - On subscribing, users will receive a daily mail about the latest data statistics.
+
 ## References
