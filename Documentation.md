@@ -14,6 +14,12 @@ We are very much thankful to our past selves for enduring the hurdles in learnin
 
 ## Abstract
 
+This project focuses on buidling a covid-19 tracker website that helps to visualise the large number of people affected, deceased and recovered due to the virus on a daily basis across the states in India. 
+    
+  It uses different API to fetch data from the servers and displays it on the website in the form of cards, charts and maps. 
+    
+  The main purpose of this website is to create awareness among people, to give them a simplistic view of data and to provide useful resources.
+
 ## Introduction (Domain Description, Motivation and Scope of the Work)
 
 ### Domain Description
@@ -184,6 +190,40 @@ The line chart is used to show the comparison among the data sets(i.e The Total 
   
   - responsive - Resizes the chart according to the window size.
   - maintainAspectRatio - Determines whether to maintain the original canvas aspect ratio(width/height) when resizing.
+
+### Search State and Dropdown box
+
+![Dropdown-box](./images/dropdown.png "Dropdown-box")
+
+- The states displayed in the dropdown box, are taken from  a stateList[] array that contains all the 28 states and 7 union territories of India, and are divided into 2 lists.
+
+```js
+input.addEventListener("input", function () {
+  let value = input.value.toUpperCase();
+
+  stateList.forEach((state) => {
+    if (state.name.toUpperCase().startsWith(value)) {
+      document.getElementById(state.name).classList.remove("hide");
+    } else {
+      document.getElementById(state.name).classList.add("hide");
+    }
+  });
+});
+```
+- The "input" event changes whenever any user searches any state.
+- Then a forEach() method is used to loop over all the states in the stateList[] array.
+- The input value that the user has typed is compared with the states here.
+- If a match is found, then the corresponding states will be displayed in the dropdown box.
+
+### Helpline Page
+- Contact Information - This page, displays the helpline numbers of every state across India, in a tabular format, that people can reach out to in need.
+
+- Testing Centres - This page provides the names as well as the links of all the hospitals in a state where the RTPCR test can be done.
+
+- Resources - This page provides all the available links of websites which renders valuable information about availability of beds, plasmas, oxygen cylinders and many more.
+
+### Awareness Page
+This page focuses on creating awareness among people by portraying the preventive measures and further highlighting the DO's and DONT's during this pandemic. 
 
 ## Results and Discussion
 
