@@ -6,7 +6,7 @@
 
 ## Acknowledgement
 
-We would like to thank our Project Guide NS Ma'am for her whole-hearted support in making this project. her insights gave us new perspectives and ideas to make our project faster, robust and beautiful.
+We would like to thank our Project Guide NS Ma'am for her whole-hearted support in making this project. Her insights gave us new perspectives and ideas to make our project faster, robust and beautiful.
 
 We are very much thankful to our past selves for enduring the hurdles in learning to code in HTML, CSS, JavaScript with patience, persistence and perseverance. Thank you for never giving up. Although there might be many bugs left, we can cut you off some slack and do the rest.
 
@@ -59,7 +59,7 @@ By using our platform, Users can get daily accurate statistics of confirmed case
 
 #### Algorithm used in drawing the Growth Rate Chart
 
-The following formula has been used to generate Daily Growth Rate graph
+The following formula has been used to generate Daily Growth Rate graph:
 
 $$PR = {\frac {(V_{present} - V_{past})} {V_{past}} * 100}$$
 
@@ -68,6 +68,14 @@ $$PR = \text{Percent Rate}$$
 $$V_{present} = \text{Present Value}$$
 
 $$V_{past} = \text{Past Value}$$
+
+#### Algorithm used in drawing the Recovery Rate and Death RateChart
+
+The following formula has been used to generate Recovery Rate and Death Rate graph :
+
+$$GrowthRate = {\frac {Recovered} {Confirmed} * 100}$$
+
+$$DeathRate = {\frac {Decaesed} {Confirmed} * 100}$$
 
 ### Design
 
