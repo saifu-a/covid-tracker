@@ -12,6 +12,46 @@ We are very much thankful to our past selves for enduring the hurdles in learnin
 
 ## Table of Contents
 
+- [Covid-19 Tracker](#covid-19-tracker)
+  - [Title Page](#title-page)
+  - [Certificate from the Supervisor](#certificate-from-the-supervisor)
+  - [Acknowledgement](#acknowledgement)
+  - [Table of Contents](#table-of-contents)
+  - [Abstract](#abstract)
+  - [Introduction (Domain Description, Motivation and Scope of the Work)](#introduction-domain-description-motivation-and-scope-of-the-work)
+    - [Domain Description](#domain-description)
+    - [Motivation](#motivation)
+    - [Scope of the Work](#scope-of-the-work)
+  - [Background/Review of Related Work](#backgroundreview-of-related-work)
+    - [Websites](#websites)
+      - [The following websites were the one from where we took our inspiration](#the-following-websites-were-the-one-from-where-we-took-our-inspiration)
+  - [Methodology (Problem Formulation, Algorithm Description, and other Design descriptions)](#methodology-problem-formulation-algorithm-description-and-other-design-descriptions)
+    - [Problem Formulation](#problem-formulation)
+    - [Algorithm Description](#algorithm-description)
+      - [Algorithm used in drawing the Growth Rate Chart](#algorithm-used-in-drawing-the-growth-rate-chart)
+      - [Algorithm used in drawing the Recovery Rate and Death RateChart](#algorithm-used-in-drawing-the-recovery-rate-and-death-ratechart)
+    - [Design](#design)
+    - [Technologies Used](#technologies-used)
+      - [HTML](#html)
+      - [CSS](#css)
+      - [JavaScript](#javascript)
+      - [Firebase](#firebase)
+    - [Additional Libraries Used](#additional-libraries-used)
+    - [Data Sources](#data-sources)
+  - [Implementation](#implementation)
+    - [DFD](#dfd)
+    - [Implementation of the Card Component](#implementation-of-the-card-component)
+    - [Implementation of the Line Chart](#implementation-of-the-line-chart)
+    - [Implementation of Heat map](#implementation-of-heat-map)
+    - [Search State and Dropdown box](#search-state-and-dropdown-box)
+    - [Helpline Page](#helpline-page)
+    - [Awareness Page](#awareness-page)
+  - [Results and Discussion](#results-and-discussion)
+    - [Results](#results)
+    - [Discussion](#discussion)
+  - [Conclusion](#conclusion)
+  - [References](#references)
+
 ## Abstract
 
 This project focuses on building a covid-19 tracker website that helps to visualize the large number of people affected, deceased and recovered due to the virus on a daily basis across the states in India.
@@ -43,9 +83,17 @@ As with Covid-19 data, this project can be used to visualize any kind of data in
 
 #### The following websites were the one from where we took our inspiration
 
-1. covid19india.org
+1. Ministry of Health and Family Welfare (mohfw.gov.in)
 
-  This is a website built using React.js and has their own REST API.
+    This is the official website of Government of India, Ministry of Health and Family Welfare. The charts displayed in that site inspired us.
+
+2. covid19india.org
+
+    This is a website built using React.js and has their own REST API.
+
+3. indiacovid-19.in
+
+    This is a website similar to covid19india.org. But it is built using Angular. They don't have any APIs.
 
 ## Methodology (Problem Formulation, Algorithm Description, and other Design descriptions)
 
@@ -217,13 +265,18 @@ The line chart is used to show the comparison among the data sets(i.e The Total 
 The Heat map has the same logic as the Card components. The data is fetched from the API and displayed when you hover over a particular state. The data is passed through an if-else construct which determines the color of the state according to the number of deaths in that particular state.
 
 ```js
-let deaths = stateData["deceased"];
-if (deaths < 100) states[state].color = "#1FAA59";
-else if (deaths < 1000) states[state].color = "#FF6263";
-else if (deaths < 10000) states[state].color = "#D82E2F";
-else if (deaths < 100000) states[state].color = "#D00000";
-else states[state].color = "#FF0000";
+for (let state in states) {
+  let deaths = stateData["deceased"];
+  if (deaths < 100) states[state].color = "#1FAA59";
+  else if (deaths < 1000) states[state].color = "#FF6263";
+  else if (deaths < 10000) states[state].color = "#D82E2F";
+  else if (deaths < 100000) states[state].color = "#D00000";
+  else states[state].color = "#FF0000";
+}
 ```
+
+- `states` is an Array containing all the states objects.
+- Inside the `for` loop we are accessing each state and assigning them a color according to the number of deaths in that state.
 
 ### Search State and Dropdown box
 
@@ -263,6 +316,10 @@ input.addEventListener("input", function () {
 This page focuses on creating awareness among people by portraying the preventive measures and further highlighting the DO's and DON'Ts during this pandemic.
 
 ## Results and Discussion
+
+### Results
+
+### Discussion
 
 ## Conclusion
 
