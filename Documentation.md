@@ -330,3 +330,13 @@ In future, we may extend our website to include features such as:
 - Newsletter - On subscribing, users will receive a daily mail about the latest data statistics.
 
 ## References
+
+- HTML & CSS: Design and Build Web Sites by Jon Duckett
+
+- Eloquent JavaScript: A Modern Introduction to Programming by Marijn Haverbeke
+
+- Learning Web Design by Jennifer Niederst Robbins
+
+- JavaScript: The Definitive Guide: Master the World's Most-Used Programming Language by David Flanagan
+
+- Secrets of the JavaScript Ninja by Bear Bibeault, John Resig, and Josip Maras
