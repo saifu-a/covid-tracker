@@ -210,6 +210,21 @@ The line chart is used to show the comparison among the data sets(i.e The Total 
   - responsive - Resizes the chart according to the window size.
   - maintainAspectRatio - Determines whether to maintain the original canvas aspect ratio(width/height) when resizing.
 
+### Implementation of Heat map
+
+![Heat map](./images/Heatmap.png)
+
+The Heat map has the same logic as the Card components. The data is fetched from the API and displayed when you hover over a particular state. The data is passed through an if-else construct which determines the color of the state according to the number of deaths in that particular state.
+
+```js
+let deaths = stateData["deceased"];
+if (deaths < 100) states[state].color = "#1FAA59";
+else if (deaths < 1000) states[state].color = "#FF6263";
+else if (deaths < 10000) states[state].color = "#D82E2F";
+else if (deaths < 100000) states[state].color = "#D00000";
+else states[state].color = "#FF0000";
+```
+
 ### Search State and Dropdown box
 
 ![Dropdown-box](./images/dropdown.png "Dropdown-box")

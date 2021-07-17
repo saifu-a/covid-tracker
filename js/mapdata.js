@@ -297,7 +297,7 @@ function displayStateData(data) {
 
     let deaths = stateData["deceased"];
     if (deaths < 100) states[state].color = "#1FAA59";
-    else if (deaths < 1000) states[state].color = "	#FF6263";
+    else if (deaths < 1000) states[state].color = "#FF6263";
     else if (deaths < 10000) states[state].color = "#D82E2F";
     else if (deaths < 100000) states[state].color = "#D00000";
     else states[state].color = "#FF0000";
