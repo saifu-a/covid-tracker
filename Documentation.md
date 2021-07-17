@@ -14,11 +14,11 @@ We are very much thankful to our past selves for enduring the hurdles in learnin
 
 ## Abstract
 
-This project focuses on buidling a covid-19 tracker website that helps to visualise the large number of people affected, deceased and recovered due to the virus on a daily basis across the states in India. 
-    
-  It uses different API to fetch data from the servers and displays it on the website in the form of cards, charts and maps. 
-    
-  The main purpose of this website is to create awareness among people, to give them a simplistic view of data and to provide useful resources.
+This project focuses on building a covid-19 tracker website that helps to visualize the large number of people affected, deceased and recovered due to the virus on a daily basis across the states in India.
+
+It uses different API to fetch data from the servers and displays it on the website in the form of cards, charts and maps.
+
+The main purpose of this website is to create awareness among people, to give them a simplistic view of data and to provide useful resources.
 
 ## Introduction (Domain Description, Motivation and Scope of the Work)
 
@@ -75,7 +75,7 @@ The following formula has been used to generate Recovery Rate and Death Rate gra
 
 $$GrowthRate = {\frac {Recovered} {Confirmed} * 100}$$
 
-$$DeathRate = {\frac {Decaesed} {Confirmed} * 100}$$
+$$DeathRate = {\frac {Deceased} {Confirmed} * 100}$$
 
 ### Design
 
@@ -119,9 +119,20 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
   This is a CSS Reset File. To explain in simpler terms, every browser has some defaults styles to each and every HTML element and it differs from browser to browser. So, to have a consistent default styles across all browsers *Normalize.css* is used. It makes the webpage look same across all browsers and platforms.
 
 - geoPlugin
+
+  This is a web service that returns the location of the client. We are using this service to determine from which state our webpage is being accessed and we can show the data pertaining to that state. Thus freeing the client of the hassle of searching their state.
+
 - Moment.js
+
+  This is a library which contains many functions related to Date and Time. We are using the functions provided by this library to format dates into its easily recognizable counterparts in our graphs.
+
 - Chart.js
+
+  This is the library we are heavily relying on to display our graphs. Rather creating the graphs from scratch, this library provides us with templates of many popular graphs like Line Chart, Pie Chart, Bar Chart, etc. We are just giving the data to the library and it's many functions and it renders the chart according to the provided data.
+
 - SweetAlert.js
+
+  This is a library containing templates for acknowledgement after a form has been submitted.
 
 ### Data Sources
 
@@ -184,10 +195,10 @@ The line chart is used to show the comparison among the data sets(i.e The Total 
 
 - Dataset Properties
   
-  data.datasets [index] - The line chart allows a number of properties to be specified for each dataset. These are used to set display properties for a specific dataset. 
+  data.datasets [index] - The line chart allows a number of properties to be specified for each dataset. These are used to set display properties for a specific dataset.
   
   - backgroundColor - The line fill color.
-  - borderColor -	The line color.
+  - borderColor - The line color.
   - fill - Fills the area under the line.
   - label - To give names to the lines used for      comparison.
   - data - Used to pass data in the form of array.
@@ -218,26 +229,29 @@ input.addEventListener("input", function () {
   });
 });
 ```
+
 - The "input" event changes whenever any user searches any state.
 - Then a forEach() method is used to loop over all the states in the stateList[] array.
 - The input value that the user has typed is compared with the states here.
 - If a match is found, then the corresponding states will be displayed in the dropdown box.
 
 ### Helpline Page
+
 - Contact Information - This page, displays the helpline numbers of every state across India, in a tabular format, that people can reach out to in need.
 
-- Testing Centres - This page provides the names as well as the links of all the hospitals in a state where the RTPCR test can be done.
+- Testing Centres - This page provides the names as well as the links of all the hospitals in a state where the RT-PCR test can be done.
 
 - Resources - This page provides all the available links of websites which renders valuable information about availability of beds, plasmas, oxygen cylinders and many more.
 
 ### Awareness Page
-This page focuses on creating awareness among people by portraying the preventive measures and further highlighting the DO's and DONT's during this pandemic. 
+
+This page focuses on creating awareness among people by portraying the preventive measures and further highlighting the DO's and DON'Ts during this pandemic.
 
 ## Results and Discussion
 
 ## Conclusion
 
-This project aims to display the accurate real-time statistics of COVID-19 pandemic and spread awareness among people. There are several other websites that serves the similar purpose as this project but the unique factor of our website is that any Organisation or any individual can add useful resources in our website by registering with us. 
+This project aims to display the accurate real-time statistics of COVID-19 pandemic and spread awareness among people. There are several other websites that serves the similar purpose as this project but the unique factor of our website is that any Organization or any individual can add useful resources in our website by registering with us.
 
 In future, we may extend our website to include features such as:
 
