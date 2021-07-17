@@ -318,8 +318,10 @@ This page focuses on creating awareness among people by portraying the preventiv
 ## Results and Discussion
 
 ### Results
+The covid-19 tracker is a desktop based website that is easily accessible by the users. The data are presented in a simplistic manner that are easily comprehensible to the users.
 
 ### Discussion
+We will further extend this project to make this website fully responsive, that can be accessible from any device making it more user-friendly.
 
 ## Conclusion
 
