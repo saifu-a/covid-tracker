@@ -18,14 +18,14 @@ We are very much thankful to our past selves for enduring the hurdles in learnin
   - [Acknowledgement](#acknowledgement)
   - [Table of Contents](#table-of-contents)
   - [Abstract](#abstract)
-  - [Introduction (Domain Description, Motivation and Scope of the Work)](#introduction-domain-description-motivation-and-scope-of-the-work)
+  - [Introduction](#introduction)
     - [Domain Description](#domain-description)
     - [Motivation](#motivation)
     - [Scope of the Work](#scope-of-the-work)
   - [Background/Review of Related Work](#backgroundreview-of-related-work)
     - [Websites](#websites)
       - [The following websites were the one from where we took our inspiration](#the-following-websites-were-the-one-from-where-we-took-our-inspiration)
-  - [Methodology (Problem Formulation, Algorithm Description, and other Design descriptions)](#methodology-problem-formulation-algorithm-description-and-other-design-descriptions)
+  - [Methodology](#methodology)
     - [Problem Formulation](#problem-formulation)
     - [Algorithm Description](#algorithm-description)
       - [Algorithm used in drawing the Growth Rate Chart](#algorithm-used-in-drawing-the-growth-rate-chart)
@@ -60,7 +60,7 @@ It uses different API to fetch data from the servers and displays it on the webs
 
 The main purpose of this website is to create awareness among people, to give them a simplistic view of data and to provide useful resources.
 
-## Introduction (Domain Description, Motivation and Scope of the Work)
+## Introduction
 
 ### Domain Description
 
@@ -95,7 +95,7 @@ As with Covid-19 data, this project can be used to visualize any kind of data in
 
     This is a website similar to covid19india.org. But it is built using Angular. They don't have any APIs.
 
-## Methodology (Problem Formulation, Algorithm Description, and other Design descriptions)
+## Methodology
 
 ### Problem Formulation
 
@@ -318,9 +318,11 @@ This page focuses on creating awareness among people by portraying the preventiv
 ## Results and Discussion
 
 ### Results
+
 The covid-19 tracker is a desktop based website that is easily accessible by the users. The data are presented in a simplistic manner that are easily comprehensible to the users.
 
 ### Discussion
+
 We will further extend this project to make this website fully responsive, that can be accessible from any device making it more user-friendly.
 
 ## Conclusion
