@@ -37,6 +37,7 @@ We are very much thankful to our past selves for enduring the hurdles in learnin
       - [JavaScript](#javascript)
       - [Firebase](#firebase)
     - [Additional Libraries Used](#additional-libraries-used)
+    - [Software and Hardware Requirements](#software-and-hardware-requirements)
     - [Data Sources](#data-sources)
   - [Implementation](#implementation)
     - [DFD](#dfd)
@@ -181,6 +182,12 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
 - SweetAlert.js
 
   This is a library containing templates for acknowledgement after a form has been submitted.
+
+### Software and Hardware Requirements
+
+- Software : VS Code, Web Browser like Google Chrome, Mozilla Firefox, Apple Safari or Microsoft Edge.
+
+- Hardware : Laptop/Desktop with moderate CPU speed and internet connectivity.
 
 ### Data Sources
 
