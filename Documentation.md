@@ -40,7 +40,10 @@ We are very much thankful to our past selves for enduring the hurdles in learnin
     - [Software and Hardware Requirements](#software-and-hardware-requirements)
     - [Data Sources](#data-sources)
   - [Implementation](#implementation)
-    - [DFD](#dfd)
+    - [Data Flow Diagram](#data-flow-diagram)
+      - [Level 0 DFD](#level-0-dfd)
+      - [Level 1 DFD](#level-1-dfd)
+    - [Entity Relationship Diagram](#entity-relationship-diagram)
     - [Implementation of the Card Component](#implementation-of-the-card-component)
     - [Implementation of the Line Chart](#implementation-of-the-line-chart)
     - [Implementation of Heat map](#implementation-of-heat-map)
@@ -201,9 +204,19 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
 
 ## Implementation
 
-### DFD
+### Data Flow Diagram
 
-![DFD](./images/DFD.png "DFD")
+#### Level 0 DFD
+
+![Level 0 DFD](./images/DFD0.png "Level 0 DFD")
+
+#### Level 1 DFD
+
+![Level 1 DFD](./images/DFD1.png "Level 1 DFD")
+
+### Entity Relationship Diagram
+
+![ERD](./images/ERD.png "ERD")
 
 ### Implementation of the Card Component
 
