@@ -268,7 +268,9 @@ async function fetchStateData() {
   let response, data;
 
   try {
-    response = await fetch("https://api.covid19india.org/v4/min/data.min.json");
+    response = await fetch(
+      "https://data.covid19india.org/v4/min/data.min.json"
+    );
     data = await response.json();
   } catch (err) {
     console.error("Couldn't fetch data from Covid19India API. Error: " + err);
@@ -297,7 +299,7 @@ function displayStateData(data) {
 
     let deaths = stateData["deceased"];
     if (deaths < 100) states[state].color = "#1FAA59";
-    else if (deaths < 1000) states[state].color = "	#FF6263";
+    else if (deaths < 1000) states[state].color = "#FF6263";
     else if (deaths < 10000) states[state].color = "#D82E2F";
     else if (deaths < 100000) states[state].color = "#D00000";
     else states[state].color = "#FF0000";

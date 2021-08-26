@@ -6,15 +6,65 @@
 
 ## Acknowledgement
 
-We would like to thank our Project Guide NS Ma'am for her whole-hearted support in making this project. her insights gave us new perspectives and ideas to make our project faster, robust and beautiful.
+We would like to thank our Project Guide NS Ma'am for her whole-hearted support in making this project. Her insights gave us new perspectives and ideas to make our project faster, robust and beautiful.
 
-We are very much thankful to our past selves for enduring the hurdles in learning to code in HTML, CSS, JavaScript with patience, persistence and perseverence. Thank you for never giving up. Although there might be many bugs left, we can cut you off some slack and do the rest.
+We are very much thankful to our past selves for enduring the hurdles in learning to code in HTML, CSS, JavaScript with patience, persistence and perseverance. Thank you for never giving up. Although there might be many bugs left, we can cut you off some slack and do the rest.
 
 ## Table of Contents
 
+- [Covid-19 Tracker](#covid-19-tracker)
+  - [Title Page](#title-page)
+  - [Certificate from the Supervisor](#certificate-from-the-supervisor)
+  - [Acknowledgement](#acknowledgement)
+  - [Table of Contents](#table-of-contents)
+  - [Abstract](#abstract)
+  - [Introduction](#introduction)
+    - [Domain Description](#domain-description)
+    - [Motivation](#motivation)
+    - [Scope of the Work](#scope-of-the-work)
+  - [Background/Review of Related Work](#backgroundreview-of-related-work)
+    - [Websites](#websites)
+      - [The following websites were the one from where we took our inspiration](#the-following-websites-were-the-one-from-where-we-took-our-inspiration)
+  - [Methodology](#methodology)
+    - [Problem Formulation](#problem-formulation)
+    - [Algorithm Description](#algorithm-description)
+      - [Algorithm used in drawing the Growth Rate Chart](#algorithm-used-in-drawing-the-growth-rate-chart)
+      - [Algorithm used in drawing the Recovery Rate and Death RateChart](#algorithm-used-in-drawing-the-recovery-rate-and-death-ratechart)
+    - [Design](#design)
+    - [Technologies Used](#technologies-used)
+      - [HTML](#html)
+      - [CSS](#css)
+      - [JavaScript](#javascript)
+      - [Firebase](#firebase)
+    - [Additional Libraries Used](#additional-libraries-used)
+    - [Software and Hardware Requirements](#software-and-hardware-requirements)
+    - [Data Sources](#data-sources)
+  - [Implementation](#implementation)
+    - [Data Flow Diagram](#data-flow-diagram)
+      - [Level 0 DFD](#level-0-dfd)
+      - [Level 1 DFD](#level-1-dfd)
+    - [Entity Relationship Diagram](#entity-relationship-diagram)
+    - [Implementation of the Card Component](#implementation-of-the-card-component)
+    - [Implementation of the Line Chart](#implementation-of-the-line-chart)
+    - [Implementation of Heat map](#implementation-of-heat-map)
+    - [Search State and Dropdown box](#search-state-and-dropdown-box)
+    - [Helpline Page](#helpline-page)
+    - [Awareness Page](#awareness-page)
+  - [Results and Discussion](#results-and-discussion)
+    - [Results](#results)
+    - [Discussion](#discussion)
+  - [Conclusion](#conclusion)
+  - [References](#references)
+
 ## Abstract
 
-## Introduction (Domain Description, Motivation and Scope of the Work)
+This project focuses on building a covid-19 tracker website that helps to visualize the large number of people affected, deceased and recovered due to the virus on a daily basis across the states in India.
+
+It uses different API to fetch data from the servers and displays it on the website in the form of cards, charts and maps.
+
+The main purpose of this website is to create awareness among people, to give them a simplistic view of data and to provide useful resources.
+
+## Introduction
 
 ### Domain Description
 
@@ -33,7 +83,23 @@ As with Covid-19 data, this project can be used to visualize any kind of data in
 
 ## Background/Review of Related Work
 
-## Methodology (Problem Formulation, Algorithm Description, and other Design descriptions)
+### Websites
+
+#### The following websites were the one from where we took our inspiration
+
+1. Ministry of Health and Family Welfare (mohfw.gov.in)
+
+    This is the official website of Government of India, Ministry of Health and Family Welfare. The charts displayed in that site inspired us.
+
+2. covid19india.org
+
+    This is a website built using React.js and has their own REST API.
+
+3. indiacovid-19.in
+
+    This is a website similar to covid19india.org. But it is built using Angular. They don't have any APIs.
+
+## Methodology
 
 ### Problem Formulation
 
@@ -45,9 +111,9 @@ By using our platform, Users can get daily accurate statistics of confirmed case
 
 #### Algorithm used in drawing the Growth Rate Chart
 
-The following formula has been used to generate Daily Growth Rate graph
+The following formula has been used to generate Daily Growth Rate graph:
 
-$$PR = {(V_{present} - V_{past}) \over V_{past}} * 100$$
+$$PR = {\frac {(V_{present} - V_{past})} {V_{past}} * 100}$$
 
 $$PR = \text{Percent Rate}$$
 
@@ -55,9 +121,17 @@ $$V_{present} = \text{Present Value}$$
 
 $$V_{past} = \text{Past Value}$$
 
+#### Algorithm used in drawing the Recovery Rate and Death RateChart
+
+The following formula has been used to generate Recovery Rate and Death Rate graph :
+
+$$GrowthRate = {\frac {Recovered} {Confirmed} * 100}$$
+
+$$DeathRate = {\frac {Deceased} {Confirmed} * 100}$$
+
 ### Design
 
-### Techonologies Used
+### Technologies Used
 
 - HTML
 - CSS
@@ -85,24 +159,70 @@ Firebase (a NoSQLjSON database) is a real-time database that allows storing a li
 ### Additional Libraries Used
 
 - Google Fonts
+
+  This is a library of Free and Open Source Fonts available to use in any project. This is helpful because most of the time the browser gives some fonts which can be different in other browsers or platforms. Google Fonts enables us to use a consistent typography across all browsers and platforms.
+
 - Animate on Scroll
+
+  This is a library containing beautiful scroll animations. This gives the webpage a nice look and feel when you scroll through it. It is implemented just by importing the library in the HTML file and adding the animation name as an attribute to any HTML element.
+
 - Normalize.css
+
+  This is a CSS Reset File. To explain in simpler terms, every browser has some defaults styles to each and every HTML element and it differs from browser to browser. So, to have a consistent default styles across all browsers *Normalize.css* is used. It makes the webpage look same across all browsers and platforms.
+
 - geoPlugin
+
+  This is a web service that returns the location of the client. We are using this service to determine from which state our webpage is being accessed and we can show the data pertaining to that state. Thus freeing the client of the hassle of searching their state.
+
 - Moment.js
+
+  This is a library which contains many functions related to Date and Time. We are using the functions provided by this library to format dates into its easily recognizable counterparts in our graphs.
+
 - Chart.js
+
+  This is the library we are heavily relying on to display our graphs. Rather creating the graphs from scratch, this library provides us with templates of many popular graphs like Line Chart, Pie Chart, Bar Chart, etc. We are just giving the data to the library and it's many functions and it renders the chart according to the provided data.
+
 - SweetAlert.js
+
+  This is a library containing templates for acknowledgement after a form has been submitted.
+
+### Software and Hardware Requirements
+
+- Software : VS Code, Web Browser like Google Chrome, Mozilla Firefox, Apple Safari or Microsoft Edge.
+
+- Hardware : Laptop/Desktop with moderate CPU speed and internet connectivity.
+
+### Data Sources
+
+- [Ministry of Health and Family Welfare, Government of India](https://www.mohfw.gov.in/)
+
+- [MyGov.in](https://www.mygov.in/covid-19/)
+
+- [Covid19India.org](https://covid19india.org/)
+
+- [IndiaCovid-19.in](https://indiacovid-19.in/)
 
 ## Implementation
 
-### DFD
+### Data Flow Diagram
 
-![DFD](/images/DFD.png "DFD")
+#### Level 0 DFD
 
-#### Algorithm used in Card Component
+![Level 0 DFD](./images/DFD0.png "Level 0 DFD")
+
+#### Level 1 DFD
+
+![Level 1 DFD](./images/DFD1.png "Level 1 DFD")
+
+### Entity Relationship Diagram
+
+![ERD](./images/ERD.png "ERD")
+
+### Implementation of the Card Component
 
 The cards component:
 
-![Cards](/images/Cards.png "Cards")
+![Cards](./images/Cards.png "Cards")
 
 ```js
 async function fetchData() {
@@ -135,8 +255,112 @@ async function fetchData() {
 
 - .catch(err) is called when the promise is rejected in case a request cannot be made or a response cannot be retrieved.
 
+### Implementation of the Line Chart
+
+![Chart](./images/chart.png "Chart")
+
+The line chart is used to show the comparison among the data sets(i.e The Total Confirmed Cases, Total Recovered and Total Deaths) across the country over the past months.
+
+- Dataset Properties
+  
+  data.datasets [index] - The line chart allows a number of properties to be specified for each dataset. These are used to set display properties for a specific dataset.
+  
+  - backgroundColor - The line fill color.
+  - borderColor - The line color.
+  - fill - Fills the area under the line.
+  - label - To give names to the lines used for      comparison.
+  - data - Used to pass data in the form of array.
+
+  data.labels - Used to label the index axis(i.e. by default the x-axis.)
+
+  data.options - Provides options for the whole chart.
+  
+  - responsive - Resizes the chart according to the window size.
+  - maintainAspectRatio - Determines whether to maintain the original canvas aspect ratio(width/height) when resizing.
+
+### Implementation of Heat map
+
+![Heat map](./images/Heatmap.png)
+
+The Heat map has the same logic as the Card components. The data is fetched from the API and displayed when you hover over a particular state. The data is passed through an if-else construct which determines the color of the state according to the number of deaths in that particular state.
+
+```js
+for (let state in states) {
+  let deaths = stateData["deceased"];
+  if (deaths < 100) states[state].color = "#1FAA59";
+  else if (deaths < 1000) states[state].color = "#FF6263";
+  else if (deaths < 10000) states[state].color = "#D82E2F";
+  else if (deaths < 100000) states[state].color = "#D00000";
+  else states[state].color = "#FF0000";
+}
+```
+
+- `states` is an Array containing all the states objects.
+- Inside the `for` loop we are accessing each state and assigning them a color according to the number of deaths in that state.
+
+### Search State and Dropdown box
+
+![Dropdown-box](./images/dropdown.png "Dropdown-box")
+
+- The states displayed in the dropdown box, are taken from  a stateList[] array that contains all the 28 states and 7 union territories of India, and are divided into 2 lists.
+
+```js
+input.addEventListener("input", function () {
+  let value = input.value.toUpperCase();
+
+  stateList.forEach((state) => {
+    if (state.name.toUpperCase().startsWith(value)) {
+      document.getElementById(state.name).classList.remove("hide");
+    } else {
+      document.getElementById(state.name).classList.add("hide");
+    }
+  });
+});
+```
+
+- The "input" event changes whenever any user searches any state.
+- Then a forEach() method is used to loop over all the states in the stateList[] array.
+- The input value that the user has typed is compared with the states here.
+- If a match is found, then the corresponding states will be displayed in the dropdown box.
+
+### Helpline Page
+
+- Contact Information - This page, displays the helpline numbers of every state across India, in a tabular format, that people can reach out to in need.
+
+- Testing Centres - This page provides the names as well as the links of all the hospitals in a state where the RT-PCR test can be done.
+
+- Resources - This page provides all the available links of websites which renders valuable information about availability of beds, plasmas, oxygen cylinders and many more.
+
+### Awareness Page
+
+This page focuses on creating awareness among people by portraying the preventive measures and further highlighting the DO's and DON'Ts during this pandemic.
+
 ## Results and Discussion
+
+### Results
+
+The covid-19 tracker is a desktop based website that is easily accessible by the users. The data are presented in a simplistic manner that are easily comprehensible to the users.
+
+### Discussion
+
+We will further extend this project to make this website fully responsive, that can be accessible from any device making it more user-friendly.
 
 ## Conclusion
 
+This project aims to display the accurate real-time statistics of COVID-19 pandemic and spread awareness among people. There are several other websites that serves the similar purpose as this project but the unique factor of our website is that any Organization or any individual can add useful resources in our website by registering with us.
+
+In future, we may extend our website to include features such as:
+
+- Newsletter - On subscribing, users will receive a daily mail about the latest data statistics.
+
 ## References
+
+- HTML & CSS: Design and Build Web Sites by Jon Duckett
+
+- Eloquent JavaScript: A Modern Introduction to Programming by Marijn Haverbeke
+
+- Learning Web Design by Jennifer Niederst Robbins
+
+- JavaScript: The Definitive Guide: Master the World's Most-Used Programming Language by David Flanagan
+
+- Secrets of the JavaScript Ninja by Bear Bibeault, John Resig, and Josip Maras
