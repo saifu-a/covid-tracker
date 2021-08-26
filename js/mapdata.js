@@ -268,7 +268,9 @@ async function fetchStateData() {
   let response, data;
 
   try {
-    response = await fetch("https://api.covid19india.org/v4/min/data.min.json");
+    response = await fetch(
+      "https://data.covid19india.org/v4/min/data.min.json"
+    );
     data = await response.json();
   } catch (err) {
     console.error("Couldn't fetch data from Covid19India API. Error: " + err);

@@ -14,7 +14,7 @@ async function fetchVaccineData() {
   let response, data;
 
   try {
-    response = await fetch("https://api.covid19india.org/data.json");
+    response = await fetch("https://data.covid19india.org/data.json");
     data = await response.json();
   } catch (err) {
     console.error("Couldn't fetch data from Covid-19 India API. Error: " + err);

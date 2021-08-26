@@ -40,7 +40,7 @@ let stateList2 = [
 let dataSet = [],
   labelSet = [];
 
-let url = "https://api.covid19india.org/v4/min/data.min.json";
+let url = "https://data.covid19india.org/v4/min/data.min.json";
 async function fetchDataForChart() {
   let response, data;
 

@@ -162,7 +162,7 @@ async function fetchData(stateCode) {
 
   try {
     response = await fetch(
-      "https://api.covid19india.org/v4/min/timeseries.min.json"
+      "https://data.covid19india.org/v4/min/timeseries.min.json"
     );
     data = await response.json();
   } catch (err) {
